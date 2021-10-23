@@ -20,7 +20,9 @@ P 9400 2100
 F 0 "M1" H 9375 2625 50  0000 C CNN
 F 1 "U3V70F5" H 9375 2534 50  0000 C CNN
 F 2 "Pololu Regulators:U3V70F5" H 9400 2100 50  0001 C CNN
-F 3 "" H 9400 2100 50  0001 C CNN
+F 3 "https://www.pololu.com/product/2891" H 9400 2100 50  0001 C CNN
+F 4 "2891" H 9400 2100 50  0001 C CNN "Part#"
+F 5 "Pololu" H 9400 2100 50  0001 C CNN "Vendor"
 	1    9400 2100
 	1    0    0    -1  
 $EndComp
@@ -100,6 +102,8 @@ F 0 "J2" H 10200 2000 50  0000 C CNN
 F 1 "5V 25W" V 10300 2150 50  0000 C CNN
 F 2 "Connectors:Screw_Terminal_2Pin" H 10200 2200 50  0001 C CNN
 F 3 "~" H 10200 2200 50  0001 C CNN
+F 4 "https://www.amazon.com/Pieces-Pinch-Mount-Terminal-Connector/dp/B01MT4LC0F" H 10200 2200 50  0001 C CNN "Part#"
+F 5 "Amazon" H 10200 2200 50  0001 C CNN "Vendor"
 	1    10200 2200
 	1    0    0    1   
 $EndComp
@@ -120,6 +124,8 @@ F 0 "J1" H 750 1450 50  0000 C CNN
 F 1 "12v, 0.5A nominal, 5A Surge" V 850 1100 50  0000 C CNN
 F 2 "Connectors:Screw_Terminal_2Pin" H 750 1650 50  0001 C CNN
 F 3 "~" H 750 1650 50  0001 C CNN
+F 4 "https://www.amazon.com/Pieces-Pinch-Mount-Terminal-Connector/dp/B01MT4LC0F" H 750 1650 50  0001 C CNN "Part#"
+F 5 "Amazon" H 750 1650 50  0001 C CNN "Vendor"
 	1    750  1650
 	-1   0    0    1   
 $EndComp
@@ -135,9 +141,11 @@ L SuperCaps:SuperCap SC1
 U 1 1 60D3A11A
 P 4650 1800
 F 0 "SC1" H 4700 1900 50  0000 L CNN
-F 1 "100F" H 4700 1700 50  0000 L CNN
+F 1 "100F/200F" H 4450 1700 50  0000 L CNN
 F 2 "SuperCaps:SCC-30mm" H 4688 1650 50  0001 C CNN
-F 3 "~" H 4650 1800 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/40/AVX_SCC-1920423.pdf" H 4650 1800 50  0001 C CNN
+F 4 "581-SCCW45B107SSB / 581-SCCW45B207SSB" H 4650 1800 50  0001 C CNN "Part#"
+F 5 "Mouser" H 4650 1800 50  0001 C CNN "Vendor"
 	1    4650 1800
 	1    0    0    -1  
 $EndComp
@@ -146,9 +154,11 @@ L SuperCaps:SuperCap SC2
 U 1 1 60D3A1DD
 P 4650 2350
 F 0 "SC2" H 4700 2450 50  0000 L CNN
-F 1 "100F" H 4700 2250 50  0000 L CNN
+F 1 "100F/200F" H 4450 2250 50  0000 L CNN
 F 2 "SuperCaps:SCC-30mm" H 4688 2200 50  0001 C CNN
-F 3 "~" H 4650 2350 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/40/AVX_SCC-1920423.pdf" H 4650 2350 50  0001 C CNN
+F 4 "581-SCCW45B107SSB / 581-SCCW45B207SSB" H 4650 2350 50  0001 C CNN "Part#"
+F 5 "Mouser" H 4650 2350 50  0001 C CNN "Vendor"
 	1    4650 2350
 	1    0    0    -1  
 $EndComp
@@ -156,10 +166,12 @@ $Comp
 L Device:R_US R1
 U 1 1 60D3E583
 P 5600 5050
-F 0 "R1" V 5650 4900 50  0000 R CNN
-F 1 "1k" V 5500 5050 50  0000 R CNN
+F 0 "R1" H 5700 4900 50  0000 R CNN
+F 1 "1k" V 5700 5100 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 5640 5040 50  0001 C CNN
-F 3 "~" H 5600 5050 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 5600 5050 50  0001 C CNN
+F 4 "603-RT1206FRD071KL" H 5600 5050 50  0001 C CNN "Part#"
+F 5 "Mouser" H 5600 5050 50  0001 C CNN "Vendor"
 	1    5600 5050
 	1    0    0    -1  
 $EndComp
@@ -173,10 +185,12 @@ $Comp
 L Device:LED D3
 U 1 1 60D47674
 P 5600 5600
-F 0 "D3" V 5600 5700 50  0000 C CNN
-F 1 "Activity" V 5450 5350 50  0000 C CNN
+F 0 "D3" V 5700 5550 50  0000 C CNN
+F 1 "Activity - BLUE" H 5700 5700 50  0000 C CNN
 F 2 "Diode_SMD:D_1206_3216Metric_Castellated" H 5600 5600 50  0001 C CNN
-F 3 "~" H 5600 5600 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/109/Dialight_CBI_data_598-1206_Apr2018-1509999.pdf" H 5600 5600 50  0001 C CNN
+F 4 "645-598-8291-107F" H 5600 5600 50  0001 C CNN "Part#"
+F 5 "Mouser" H 5600 5600 50  0001 C CNN "Vendor"
 	1    5600 5600
 	0    -1   -1   0   
 $EndComp
@@ -188,6 +202,8 @@ F 0 "J4" H 7830 4092 50  0000 L CNN
 F 1 "Program" H 7830 4001 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 7750 4050 50  0001 C CNN
 F 3 "~" H 7750 4050 50  0001 C CNN
+F 4 "https://www.amazon.com/Header-Lystaii-Pin-Connector-Electronic/dp/B06ZZN8L9S" H 7750 4050 50  0001 C CNN "Part#"
+F 5 "Amazon" H 7750 4050 50  0001 C CNN "Vendor"
 	1    7750 4050
 	1    0    0    -1  
 $EndComp
@@ -198,7 +214,9 @@ P 6300 3450
 F 0 "C2" V 6250 3300 50  0000 L CNN
 F 1 ".1" V 6250 3500 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6338 3300 50  0001 C CNN
-F 3 "~" H 6300 3450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/427/VISH_S_A0011539493_1-2572098.pdf" H 6300 3450 50  0001 C CNN
+F 4 "77-VJ1206Y104MXJPBC" H 6300 3450 50  0001 C CNN "Part#"
+F 5 "Mouser" H 6300 3450 50  0001 C CNN "Vendor"
 	1    6300 3450
 	-1   0    0    1   
 $EndComp
@@ -210,6 +228,8 @@ F 0 "J3" H 950 3350 50  0000 C CNN
 F 1 "Fan" V 1050 3200 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 950 3250 50  0001 C CNN
 F 3 "~" H 950 3250 50  0001 C CNN
+F 4 "https://www.amazon.com/Header-Lystaii-Pin-Connector-Electronic/dp/B06ZZN8L9S" H 950 3250 50  0001 C CNN "Part#"
+F 5 "Amazon" H 950 3250 50  0001 C CNN "Vendor"
 	1    950  3250
 	-1   0    0    1   
 $EndComp
@@ -219,8 +239,8 @@ $Comp
 L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q2
 U 1 1 60DBDC58
 P 1400 3250
-F 0 "Q2" H 1100 3300 60  0000 L CNN
-F 1 "BSS806" H 900 3400 60  0000 L CNN
+F 0 "Q2" V 1250 3000 60  0000 L CNN
+F 1 "BSS806" V 1200 3250 60  0000 L CNN
 F 2 "digikey-footprints:SOT-23-3" H 1600 3450 60  0001 L CNN
 F 3 "https://www.mouser.com/datasheet/2/196/Infineon-BSS806NE-DS-v02_01-en-1226303.pdf" H 1600 3550 60  0001 L CNN
 F 4 "BSS138CT-ND" H 1600 3650 60  0001 L CNN "Digi-Key_PN"
@@ -244,7 +264,9 @@ P 2350 3650
 F 0 "R2" H 2282 3604 50  0000 R CNN
 F 1 "1k" H 2282 3695 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 2390 3640 50  0001 C CNN
-F 3 "~" H 2350 3650 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 2350 3650 50  0001 C CNN
+F 4 "603-RT1206FRD071KL" H 2350 3650 50  0001 C CNN "Part#"
+F 5 "Mouser" H 2350 3650 50  0001 C CNN "Vendor"
 	1    2350 3650
 	0    1    1    0   
 $EndComp
@@ -255,8 +277,10 @@ U 1 1 60DD93C0
 P 3450 1100
 F 0 "R8" V 3350 1100 50  0000 R CNN
 F 1 "1R 25W" V 3550 1150 50  0000 R CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 3490 1090 50  0001 C CNN
-F 3 "~" H 3450 1100 50  0001 C CNN
+F 2 "Connector_Wire:SolderWire-0.25sqmm_1x02_P4.5mm_D0.65mm_OD2mm" V 3490 1090 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/427/VISH_S_A0003599165_1-2569051.pdf" H 3450 1100 50  0001 C CNN
+F 4 "71-RH0251R000FE02" H 3450 1100 50  0001 C CNN "Part#"
+F 5 "Mouser" H 3450 1100 50  0001 C CNN "Vendor"
 	1    3450 1100
 	0    -1   -1   0   
 $EndComp
@@ -267,7 +291,7 @@ P 6500 2050
 F 0 "U5" H 6500 2350 60  0000 R CNN
 F 1 "MCP111-195" V 6350 2350 60  0000 R CNN
 F 2 "digikey-footprints:SOT-23-3" H 6700 2250 60  0001 L CNN
-F 3 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en011325" H 6700 2350 60  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/268/MCHP_S_A0002312823_1-2520721.pdf" H 6700 2350 60  0001 L CNN
 F 4 "MCP130T-300I/TTCT-ND" H 6700 2450 60  0001 L CNN "Digi-Key_PN"
 F 5 "MCP130T-300I/TT" H 6700 2550 60  0001 L CNN "MPN"
 F 6 "Integrated Circuits (ICs)" H 6700 2650 60  0001 L CNN "Category"
@@ -277,6 +301,8 @@ F 9 "/product-detail/en/microchip-technology/MCP130T-300I-TT/MCP130T-300I-TTCT-N
 F 10 "IC SUPERVISOR 3.00V LOW SOT23" H 6700 3050 60  0001 L CNN "Description"
 F 11 "Microchip Technology" H 6700 3150 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 6700 3250 60  0001 L CNN "Status"
+F 13 "579-MCP111T-195I/TT" H 6500 2050 50  0001 C CNN "Part#"
+F 14 "Mouser" H 6500 2050 50  0001 C CNN "Vendor"
 	1    6500 2050
 	1    0    0    -1  
 $EndComp
@@ -287,7 +313,9 @@ P 6050 3450
 F 0 "R14" H 6000 3250 50  0000 R CNN
 F 1 "9k 0.1%" V 5950 3650 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6090 3440 50  0001 C CNN
-F 3 "~" H 6050 3450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 6050 3450 50  0001 C CNN
+F 4 "603-RT1206BRD079KL" H 6050 3450 50  0001 C CNN "Part#"
+F 5 "Mouser" H 6050 3450 50  0001 C CNN "Vendor"
 	1    6050 3450
 	1    0    0    -1  
 $EndComp
@@ -298,7 +326,9 @@ P 6400 5050
 F 0 "R16" V 6350 5300 50  0000 R CNN
 F 1 "1k 0.1%" V 6500 5150 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6440 5040 50  0001 C CNN
-F 3 "~" H 6400 5050 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 6400 5050 50  0001 C CNN
+F 4 "603-RT1206BRD071KL" H 6400 5050 50  0001 C CNN "Part#"
+F 5 "Mouser" H 6400 5050 50  0001 C CNN "Vendor"
 	1    6400 5050
 	-1   0    0    1   
 $EndComp
@@ -309,7 +339,9 @@ P 3350 3450
 F 0 "R7" H 3282 3404 50  0000 R CNN
 F 1 "10k" H 3282 3495 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 3390 3440 50  0001 C CNN
-F 3 "~" H 3350 3450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 3350 3450 50  0001 C CNN
+F 4 "603-RT1206FRD0710KL" H 3350 3450 50  0001 C CNN "Part#"
+F 5 "Mouser" H 3350 3450 50  0001 C CNN "Vendor"
 	1    3350 3450
 	-1   0    0    1   
 $EndComp
@@ -322,7 +354,9 @@ P 1700 4300
 F 0 "C1" H 1600 4450 50  0000 C CNN
 F 1 "100uF" V 1650 4100 50  0000 C CNN
 F 2 "Capacitor_SMD:CP_Elec_6.3x5.2" H 1738 4150 50  0001 C CNN
-F 3 "~" H 1700 4300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/420/MVYRA_e-2509074.pdf" H 1700 4300 50  0001 C CNN
+F 4 "661-EMVY160ADA101MF5" H 1700 4300 50  0001 C CNN "Part#"
+F 5 "Mouser" H 1700 4300 50  0001 C CNN "Vendor"
 	1    1700 4300
 	1    0    0    -1  
 $EndComp
@@ -340,9 +374,9 @@ L dk_Transistors-FETs-MOSFETs-Single:IRF9540NPBF Q3
 U 1 1 60D7BFD0
 P 5750 1550
 F 0 "Q3" V 6000 1550 60  0000 C CNN
-F 1 "SI2369BDS" V 5900 1550 39  0000 C CNN
-F 2 "digikey-footprints:TO-220-3" H 5950 1750 60  0001 L CNN
-F 3 "https://www.infineon.com/dgdl/irf9540npbf.pdf?fileId=5546d462533600a401535611cfa21dc8" H 5950 1850 60  0001 L CNN
+F 1 "SQ3495EV" V 5900 1550 39  0000 C CNN
+F 2 "digikey-footprints:SOT-23-6" H 5950 1750 60  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/427/sq3495ev-1868467.pdf" H 5950 1850 60  0001 L CNN
 F 4 "IRF9540NPBF-ND" H 5950 1950 60  0001 L CNN "Digi-Key_PN"
 F 5 "IRF9540NPBF" H 5950 2050 60  0001 L CNN "MPN"
 F 6 "Discrete Semiconductor Products" H 5950 2150 60  0001 L CNN "Category"
@@ -352,6 +386,8 @@ F 9 "/product-detail/en/infineon-technologies/IRF9540NPBF/IRF9540NPBF-ND/812088"
 F 10 "MOSFET P-CH 100V 23A TO-220AB" H 5950 2550 60  0001 L CNN "Description"
 F 11 "Infineon Technologies" H 5950 2650 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 5950 2750 60  0001 L CNN "Status"
+F 13 "78-SQ3495EV-T1_GE3" H 5750 1550 50  0001 C CNN "Part#"
+F 14 "Mouser" H 5750 1550 50  0001 C CNN "Vendor"
 	1    5750 1550
 	0    -1   1    0   
 $EndComp
@@ -376,7 +412,9 @@ P 6100 1150
 F 0 "R15" V 6000 1200 50  0000 R CNN
 F 1 "10k" V 6200 1200 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6140 1140 50  0001 C CNN
-F 3 "~" H 6100 1150 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 6100 1150 50  0001 C CNN
+F 4 "603-RT1206FRD0710KL" H 6100 1150 50  0001 C CNN "Part#"
+F 5 "Mouser" H 6100 1150 50  0001 C CNN "Vendor"
 	1    6100 1150
 	0    1    1    0   
 $EndComp
@@ -402,7 +440,9 @@ P 6150 5050
 F 0 "R13" V 6100 5300 50  0000 R CNN
 F 1 "1k 0.1%" V 6250 5150 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6190 5040 50  0001 C CNN
-F 3 "~" H 6150 5050 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 6150 5050 50  0001 C CNN
+F 4 "603-RT1206BRD071KL" H 6150 5050 50  0001 C CNN "Part#"
+F 5 "Mouser" H 6150 5050 50  0001 C CNN "Vendor"
 	1    6150 5050
 	-1   0    0    1   
 $EndComp
@@ -413,7 +453,9 @@ P 5850 3450
 F 0 "R12" H 6000 3650 50  0000 R CNN
 F 1 "9k 0.1%" V 5950 3550 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 5890 3440 50  0001 C CNN
-F 3 "~" H 5850 3450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 5850 3450 50  0001 C CNN
+F 4 "603-RT1206BRD079KL" H 5850 3450 50  0001 C CNN "Part#"
+F 5 "Mouser" H 5850 3450 50  0001 C CNN "Vendor"
 	1    5850 3450
 	-1   0    0    1   
 $EndComp
@@ -433,10 +475,12 @@ $Comp
 L Device:R_US R9
 U 1 1 61172CE2
 P 2100 5200
-F 0 "R9" V 2150 5100 50  0000 R CNN
-F 1 "1k" V 2000 5200 50  0000 R CNN
+F 0 "R9" H 2200 5350 50  0000 R CNN
+F 1 "1k" V 2200 5250 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 2140 5190 50  0001 C CNN
-F 3 "~" H 2100 5200 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 2100 5200 50  0001 C CNN
+F 4 "603-RT1206FRD071KL" H 2100 5200 50  0001 C CNN "Part#"
+F 5 "Mouser" H 2100 5200 50  0001 C CNN "Vendor"
 	1    2100 5200
 	1    0    0    -1  
 $EndComp
@@ -444,10 +488,12 @@ $Comp
 L Device:LED D6
 U 1 1 61172DA4
 P 2100 5600
-F 0 "D6" V 2100 5750 50  0000 C CNN
-F 1 "ShutDown" V 1900 5400 50  0000 C CNN
+F 0 "D6" V 2200 5550 50  0000 C CNN
+F 1 "ShutDown - YELLOW" H 2300 5700 50  0000 C CNN
 F 2 "Diode_SMD:D_1206_3216Metric_Castellated" H 2100 5600 50  0001 C CNN
-F 3 "~" H 2100 5600 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/109/Dialight_CBI_data_598-1206_Apr2018-1509999.pdf" H 2100 5600 50  0001 C CNN
+F 4 "645-598-8240-107F" H 2100 5600 50  0001 C CNN "Part#"
+F 5 "Mouser" H 2100 5600 50  0001 C CNN "Vendor"
 	1    2100 5600
 	0    -1   -1   0   
 $EndComp
@@ -458,7 +504,9 @@ P 8400 1800
 F 0 "R17" V 8500 1800 50  0000 R CNN
 F 1 "1k" V 8300 1800 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 8440 1790 50  0001 C CNN
-F 3 "~" H 8400 1800 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 8400 1800 50  0001 C CNN
+F 4 "603-RT1206FRD071KL" H 8400 1800 50  0001 C CNN "Part#"
+F 5 "Mouser" H 8400 1800 50  0001 C CNN "Vendor"
 	1    8400 1800
 	0    1    1    0   
 $EndComp
@@ -467,9 +515,11 @@ L Device:LED D8
 U 1 1 61172EE0
 P 7800 1800
 F 0 "D8" H 7950 1900 50  0000 C CNN
-F 1 "PWRUP" H 7750 1650 50  0000 C CNN
+F 1 "PWRUP - GREEN" H 7750 1650 50  0000 C CNN
 F 2 "Diode_SMD:D_1206_3216Metric_Castellated" H 7800 1800 50  0001 C CNN
-F 3 "~" H 7800 1800 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/109/Dialight_CBI_data_598-1206_Apr2018-1509999.pdf" H 7800 1800 50  0001 C CNN
+F 4 "645-598-8270-107F" H 7800 1800 50  0001 C CNN "Part#"
+F 5 "Mouser" H 7800 1800 50  0001 C CNN "Vendor"
 	1    7800 1800
 	1    0    0    -1  
 $EndComp
@@ -506,7 +556,9 @@ P 1900 4950
 F 0 "R3" H 1832 4904 50  0000 R CNN
 F 1 "1k" H 1832 4995 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 1940 4940 50  0001 C CNN
-F 3 "~" H 1900 4950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 1900 4950 50  0001 C CNN
+F 4 "603-RT1206FRD071KL" H 1900 4950 50  0001 C CNN "Part#"
+F 5 "Mouser" H 1900 4950 50  0001 C CNN "Vendor"
 	1    1900 4950
 	0    1    1    0   
 $EndComp
@@ -518,6 +570,8 @@ F 0 "J5" H 950 4850 50  0000 C CNN
 F 1 "Shutdown" V 1050 4700 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 950 4750 50  0001 C CNN
 F 3 "~" H 950 4750 50  0001 C CNN
+F 4 "https://www.amazon.com/Header-Lystaii-Pin-Connector-Electronic/dp/B06ZZN8L9S" H 950 4750 50  0001 C CNN "Part#"
+F 5 "Amazon" H 950 4750 50  0001 C CNN "Vendor"
 	1    950  4750
 	-1   0    0    1   
 $EndComp
@@ -532,7 +586,9 @@ P 6550 2850
 F 0 "M3" V 6550 2950 50  0000 C CNN
 F 1 "U1V11F5" V 6300 2850 50  0000 C CNN
 F 2 "Pololu:U1V11Fx" H 6500 2700 50  0001 C CNN
-F 3 "" H 6500 2700 50  0001 C CNN
+F 3 "https://www.pololu.com/product/2562" H 6500 2700 50  0001 C CNN
+F 4 "2562" H 6550 2850 50  0001 C CNN "Part#"
+F 5 "Pololu" H 6550 2850 50  0001 C CNN "Vendor"
 	1    6550 2850
 	0    -1   -1   0   
 $EndComp
@@ -609,9 +665,11 @@ L Device:R_US R6
 U 1 1 6124D100
 P 2850 5200
 F 0 "R6" V 2900 5100 50  0000 R CNN
-F 1 "1K 1%" V 2750 5300 50  0000 R CNN
+F 1 "1k 0.1%" V 2750 5300 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 2890 5190 50  0001 C CNN
-F 3 "~" H 2850 5200 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 2850 5200 50  0001 C CNN
+F 4 "603-RT1206BRD071KL" H 2850 5200 50  0001 C CNN "Part#"
+F 5 "Mouser" H 2850 5200 50  0001 C CNN "Vendor"
 	1    2850 5200
 	1    0    0    -1  
 $EndComp
@@ -620,9 +678,11 @@ L Device:R_US R5
 U 1 1 6124D262
 P 2700 4250
 F 0 "R5" V 2600 4250 50  0000 R CNN
-F 1 "1K 1%" V 2800 4350 50  0000 R CNN
+F 1 "1k 0.1%" V 2800 4350 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 2740 4240 50  0001 C CNN
-F 3 "~" H 2700 4250 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 2700 4250 50  0001 C CNN
+F 4 "603-RT1206BRD071KL" H 2700 4250 50  0001 C CNN "Part#"
+F 5 "Mouser" H 2700 4250 50  0001 C CNN "Vendor"
 	1    2700 4250
 	0    1    1    0   
 $EndComp
@@ -637,7 +697,9 @@ P 8600 3450
 F 0 "R18" H 8750 3600 50  0000 R CNN
 F 1 "50" V 8500 3500 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 8640 3440 50  0001 C CNN
-F 3 "~" H 8600 3450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/219/KOA_Speer_RN73__1_-1894048.pdf" H 8600 3450 50  0001 C CNN
+F 4 "660-RN732BTTD50R0B25" H 8600 3450 50  0001 C CNN "Part#"
+F 5 "Mouser" H 8600 3450 50  0001 C CNN "Vendor"
 	1    8600 3450
 	1    0    0    -1  
 $EndComp
@@ -647,8 +709,10 @@ U 1 1 61262871
 P 1850 2750
 F 0 "J6" V 1816 2562 50  0000 R CNN
 F 1 "12V  5V" V 1950 2900 50  0000 R CNN
-F 2 "" H 1850 2750 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1850 2750 50  0001 C CNN
 F 3 "~" H 1850 2750 50  0001 C CNN
+F 4 "https://www.amazon.com/Header-Lystaii-Pin-Connector-Electronic/dp/B06ZZN8L9S" H 1850 2750 50  0001 C CNN "Part#"
+F 5 "Amazon" H 1850 2750 50  0001 C CNN "Vendor"
 	1    1850 2750
 	0    -1   -1   0   
 $EndComp
@@ -674,7 +738,9 @@ P 3150 1550
 F 0 "U3" H 3150 1276 50  0000 C CNN
 F 1 "BTS443P" H 3150 1185 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:TO-252-4" H 3150 1300 50  0001 C CNN
-F 3 "http://www.infineon.com/dgdl/Infineon-BTS443P-DS-v01_00-EN.pdf?fileId=5546d4625a888733015aa9afbc5035d5" H 3150 1150 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/196/Infineon-BTS443P-DS-v01_00-EN-1226556.pdf" H 3150 1150 50  0001 C CNN
+F 4 "726-BTS443P" H 3150 1550 50  0001 C CNN "Part#"
+F 5 "Mouser" H 3150 1550 50  0001 C CNN "Vendor"
 	1    3150 1550
 	0    -1   -1   0   
 $EndComp
@@ -691,10 +757,12 @@ $Comp
 L Device:R_US R4
 U 1 1 612FB1DD
 P 2500 5200
-F 0 "R4" V 2550 5100 50  0000 R CNN
-F 1 "1k" V 2400 5200 50  0000 R CNN
+F 0 "R4" H 2600 5350 50  0000 R CNN
+F 1 "1k" V 2600 5250 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 2540 5190 50  0001 C CNN
-F 3 "~" H 2500 5200 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 2500 5200 50  0001 C CNN
+F 4 "603-RT1206FRD071KL" H 2500 5200 50  0001 C CNN "Part#"
+F 5 "Mouser" H 2500 5200 50  0001 C CNN "Vendor"
 	1    2500 5200
 	1    0    0    -1  
 $EndComp
@@ -702,10 +770,12 @@ $Comp
 L Device:LED D5
 U 1 1 612FB29F
 P 2500 5600
-F 0 "D5" V 2500 5700 50  0000 C CNN
-F 1 "FAULT" V 2300 5400 50  0000 C CNN
+F 0 "D5" V 2600 5550 50  0000 C CNN
+F 1 "FAULT - RED" H 2550 5700 50  0000 C CNN
 F 2 "Diode_SMD:D_1206_3216Metric_Castellated" H 2500 5600 50  0001 C CNN
-F 3 "~" H 2500 5600 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/109/Dialight_CBI_data_598-1206_Apr2018-1509999.pdf" H 2500 5600 50  0001 C CNN
+F 4 "645-598-8220-107F" H 2500 5600 50  0001 C CNN "Part#"
+F 5 "Mouser" H 2500 5600 50  0001 C CNN "Vendor"
 	1    2500 5600
 	0    -1   -1   0   
 $EndComp
@@ -716,7 +786,9 @@ P 5900 5050
 F 0 "R11" V 5850 5300 50  0000 R CNN
 F 1 "1k 0.1%" V 6000 5150 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 5940 5040 50  0001 C CNN
-F 3 "~" H 5900 5050 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 5900 5050 50  0001 C CNN
+F 4 "603-RT1206BRD071KL" H 5900 5050 50  0001 C CNN "Part#"
+F 5 "Mouser" H 5900 5050 50  0001 C CNN "Vendor"
 	1    5900 5050
 	-1   0    0    1   
 $EndComp
@@ -727,7 +799,9 @@ P 5600 3450
 F 0 "R10" H 5550 3250 50  0000 R CNN
 F 1 "9k 0.1%" V 5500 3650 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 5640 3440 50  0001 C CNN
-F 3 "~" H 5600 3450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 5600 3450 50  0001 C CNN
+F 4 "603-RT1206BRD079KL" H 5600 3450 50  0001 C CNN "Part#"
+F 5 "Mouser" H 5600 3450 50  0001 C CNN "Vendor"
 	1    5600 3450
 	1    0    0    -1  
 $EndComp
@@ -761,6 +835,8 @@ F 0 "J7" H 7750 4800 50  0000 C CNN
 F 1 "Serial Debug" H 8050 4650 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7750 4700 50  0001 C CNN
 F 3 "~" H 7750 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/Header-Lystaii-Pin-Connector-Electronic/dp/B06ZZN8L9S" H 7750 4700 50  0001 C CNN "Part#"
+F 5 "Amazon" H 7750 4700 50  0001 C CNN "Vendor"
 	1    7750 4700
 	1    0    0    -1  
 $EndComp
@@ -808,6 +884,7 @@ F 1 "MCP1501-10" H 7950 3674 50  0000 C CNN
 F 2 "digikey-footprints:SOT-23-6" H 7700 3300 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/268/MCHP_S_A0012115150_1-2576319.pdf" H 7700 3300 50  0001 C CNN
 F 4 "579-MCP1501T-10E/CHY" H 7950 3350 50  0001 C CNN "Part#"
+F 5 "Mouser" H 7950 3350 50  0001 C CNN "Vendor"
 	1    7950 3350
 	1    0    0    -1  
 $EndComp
@@ -932,6 +1009,8 @@ F 0 "J8" H 8250 4450 50  0000 C CNN
 F 1 "REMOVE to PRGM" V 8350 4300 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8250 4350 50  0001 C CNN
 F 3 "~" H 8250 4350 50  0001 C CNN
+F 4 "https://www.amazon.com/Header-Lystaii-Pin-Connector-Electronic/dp/B06ZZN8L9S" H 8250 4350 50  0001 C CNN "Part#"
+F 5 "Amazon" H 8250 4350 50  0001 C CNN "Vendor"
 	1    8250 4350
 	0    1    -1   0   
 $EndComp
@@ -951,6 +1030,8 @@ F 0 "M2" H 1950 2565 50  0000 C CNN
 F 1 "XL4015" H 1950 2474 50  0000 C CNN
 F 2 "Footprint_Library:XL4015" H 1950 2200 50  0001 C CNN
 F 3 "" H 1950 2200 50  0001 C CNN
+F 4 "https://www.amazon.com/Adjustable-Converter-1-25-36v-Efficiency-Regulator/dp/B079N9BFZC" H 1950 2200 50  0001 C CNN "Part#"
+F 5 "Amazon" H 1950 2200 50  0001 C CNN "Vendor"
 	1    1950 2200
 	1    0    0    -1  
 $EndComp
@@ -965,8 +1046,8 @@ U 1 1 616F076A
 P 6700 5500
 F 0 "S1" H 6700 5847 60  0000 C CNN
 F 1 "RESET" H 6700 5741 60  0000 C CNN
-F 2 "digikey-footprints:Switch_Tactile_THT_6x6mm" H 6900 5700 60  0001 L CNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 6900 5800 60  0001 L CNN
+F 2 "digikey-footprints:Switch_Tactile_SMD_6x6mm" H 6900 5700 60  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/315/sw_lt_eng_6s_th-1289042.pdf" H 6900 5800 60  0001 L CNN
 F 4 "450-1650-ND" H 6900 5900 60  0001 L CNN "Digi-Key_PN"
 F 5 "1825910-6" H 6900 6000 60  0001 L CNN "MPN"
 F 6 "Switches" H 6900 6100 60  0001 L CNN "Category"
@@ -976,6 +1057,8 @@ F 9 "/product-detail/en/te-connectivity-alcoswitch-switches/1825910-6/450-1650-N
 F 10 "SWITCH TACTILE SPST-NO 0.05A 24V" H 6900 6500 60  0001 L CNN "Description"
 F 11 "TE Connectivity ALCOSWITCH Switches" H 6900 6600 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 6900 6700 60  0001 L CNN "Status"
+F 13 "667-EVQ-7Q201W" H 6700 5500 50  0001 C CNN "Part#"
+F 14 "Mouser" H 6700 5500 50  0001 C CNN "Vendor"
 	1    6700 5500
 	1    0    0    -1  
 $EndComp
@@ -1127,10 +1210,12 @@ $Comp
 L Device:R_US R20
 U 1 1 616034BD
 P 3550 5200
-F 0 "R20" V 3600 5100 50  0000 R CNN
-F 1 "1k" V 3450 5200 50  0000 R CNN
+F 0 "R20" H 3700 5050 50  0000 R CNN
+F 1 "1k" V 3650 5250 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 3590 5190 50  0001 C CNN
-F 3 "~" H 3550 5200 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 3550 5200 50  0001 C CNN
+F 4 "603-RT1206FRD071KL" H 3550 5200 50  0001 C CNN "Part#"
+F 5 "Mouser" H 3550 5200 50  0001 C CNN "Vendor"
 	1    3550 5200
 	1    0    0    -1  
 $EndComp
@@ -1138,10 +1223,12 @@ $Comp
 L Device:LED D10
 U 1 1 61603573
 P 3550 5600
-F 0 "D10" V 3550 5700 50  0000 C CNN
-F 1 "MAINPWR" V 3350 5400 50  0000 C CNN
+F 0 "D10" V 3650 5500 50  0000 C CNN
+F 1 "MAINPWR - GREEN" H 3700 5700 50  0000 C CNN
 F 2 "Diode_SMD:D_1206_3216Metric_Castellated" H 3550 5600 50  0001 C CNN
-F 3 "~" H 3550 5600 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/109/Dialight_CBI_data_598-1206_Apr2018-1509999.pdf" H 3550 5600 50  0001 C CNN
+F 4 "645-598-8270-107F" H 3550 5600 50  0001 C CNN "Part#"
+F 5 "Mouser" H 3550 5600 50  0001 C CNN "Vendor"
 	1    3550 5600
 	0    -1   -1   0   
 $EndComp
@@ -1184,7 +1271,7 @@ P 1300 1000
 F 0 "Q5" V 1567 1000 60  0000 C CNN
 F 1 "SPD18P06PGBTMA1" V 1461 1000 60  0000 C CNN
 F 2 "Package_TO_SOT_SMD:TO-252-3_TabPin2" H 1500 1200 60  0001 L CNN
-F 3 "https://www.infineon.com/dgdl/irf9540npbf.pdf?fileId=5546d462533600a401535611cfa21dc8" H 1500 1300 60  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/196/Infineon-SPD18P06P-DS-v03_04-en-1225203.pdf" H 1500 1300 60  0001 L CNN
 F 4 "IRF9540NPBF-ND" H 1500 1400 60  0001 L CNN "Digi-Key_PN"
 F 5 "IRF9540NPBF" H 1500 1500 60  0001 L CNN "MPN"
 F 6 "Discrete Semiconductor Products" H 1500 1600 60  0001 L CNN "Category"
@@ -1194,6 +1281,8 @@ F 9 "/product-detail/en/infineon-technologies/IRF9540NPBF/IRF9540NPBF-ND/812088"
 F 10 "MOSFET P-CH 100V 23A TO-220AB" H 1500 2000 60  0001 L CNN "Description"
 F 11 "Infineon Technologies" H 1500 2100 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 1500 2200 60  0001 L CNN "Status"
+F 13 "726-SPD18P06P" H 1300 1000 50  0001 C CNN "Part#"
+F 14 "Mouser" H 1300 1000 50  0001 C CNN "Vendor"
 	1    1300 1000
 	0    1    -1   0   
 $EndComp
@@ -1206,7 +1295,9 @@ P 1350 1450
 F 0 "R19" H 1282 1404 50  0000 R CNN
 F 1 "10k" H 1282 1495 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 1390 1440 50  0001 C CNN
-F 3 "~" H 1350 1450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 1350 1450 50  0001 C CNN
+F 4 "603-RT1206FRD0710KL" H 1350 1450 50  0001 C CNN "Part#"
+F 5 "Mouser" H 1350 1450 50  0001 C CNN "Vendor"
 	1    1350 1450
 	0    -1   -1   0   
 $EndComp
@@ -1275,8 +1366,10 @@ U 1 1 617DB464
 P 1050 1900
 F 0 "D9" H 1050 2117 50  0000 C CNN
 F 1 "1N914" H 1050 2026 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1050 1725 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/85622/1n914.pdf" H 1050 1900 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 1050 1725 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/395/1N4148W_SERIES_K1804-1918054.pdf" H 1050 1900 50  0001 C CNN
+F 4 "821-1N914BWRHG" H 1050 1900 50  0001 C CNN "Part#"
+F 5 "Mouser" H 1050 1900 50  0001 C CNN "Vendor"
 	1    1050 1900
 	1    0    0    -1  
 $EndComp
@@ -1291,6 +1384,8 @@ F 0 "J9" H 700 2100 50  0000 C CNN
 F 1 "Main PWR SW" V 800 2250 50  0000 C CNN
 F 2 "Connectors:Screw_Terminal_2Pin" H 700 2300 50  0001 C CNN
 F 3 "~" H 700 2300 50  0001 C CNN
+F 4 "https://www.amazon.com/Pieces-Pinch-Mount-Terminal-Connector/dp/B01MT4LC0F" H 700 2300 50  0001 C CNN "Part#"
+F 5 "Amazon" H 700 2300 50  0001 C CNN "Vendor"
 	1    700  2300
 	-1   0    0    1   
 $EndComp
@@ -1306,7 +1401,9 @@ P 5300 3450
 F 0 "R21" H 5232 3404 50  0000 R CNN
 F 1 "10k" H 5232 3495 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 5340 3440 50  0001 C CNN
-F 3 "~" H 5300 3450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 5300 3450 50  0001 C CNN
+F 4 "603-RT1206FRD0710KL" H 5300 3450 50  0001 C CNN "Part#"
+F 5 "Mouser" H 5300 3450 50  0001 C CNN "Vendor"
 	1    5300 3450
 	1    0    0    -1  
 $EndComp
@@ -1314,10 +1411,12 @@ $Comp
 L Diode:1N914 D11
 U 1 1 61527237
 P 650 2900
-F 0 "D11" H 650 3117 50  0000 C CNN
-F 1 "1N914" H 650 3026 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 650 2725 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/85622/1n914.pdf" H 650 2900 50  0001 C CNN
+F 0 "D11" H 800 2950 50  0000 C CNN
+F 1 "1N914" H 650 2800 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 650 2725 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/395/1N4148W_SERIES_K1804-1918054.pdf" H 650 2900 50  0001 C CNN
+F 4 "821-1N914BWRHG" H 650 2900 50  0001 C CNN "Part#"
+F 5 "Mouser" H 650 2900 50  0001 C CNN "Vendor"
 	1    650  2900
 	0    1    1    0   
 $EndComp

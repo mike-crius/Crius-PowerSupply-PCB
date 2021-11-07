@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "CommCube Power Supply"
 Date "2021-09-26"
-Rev "0.31"
+Rev "0.37"
 Comp "Crius Technology Group"
 Comment1 ""
 Comment2 ""
@@ -14,12 +14,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Pololu:U3V70F5 M1
+L Pololu:U3V70F5 M3
 U 1 1 60CF9EB1
 P 9400 2100
-F 0 "M1" H 9375 2625 50  0000 C CNN
+F 0 "M3" H 9375 2625 50  0000 C CNN
 F 1 "U3V70F5" H 9375 2534 50  0000 C CNN
-F 2 "Pololu Regulators:U3V70F5" H 9400 2100 50  0001 C CNN
+F 2 "Pololu:U3V70F5" H 9400 2100 50  0001 C CNN
 F 3 "https://www.pololu.com/product/2891" H 9400 2100 50  0001 C CNN
 F 4 "2891" H 9400 2100 50  0001 C CNN "Part#"
 F 5 "Pololu" H 9400 2100 50  0001 C CNN "Vendor"
@@ -27,10 +27,10 @@ F 5 "Pololu" H 9400 2100 50  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Advanced_Linear_Devices:ALD910027 U1
+L Advanced_Linear_Devices:ALD910027 U3
 U 1 1 60CFA50D
 P 4050 2100
-F 0 "U1" H 4050 2515 50  0000 C CNN
+F 0 "U3" H 4050 2515 50  0000 C CNN
 F 1 "ALD910027" H 4050 2424 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3950 2200 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/8/ALD810027-464310.pdf" H 3950 2200 50  0001 C CNN
@@ -88,17 +88,17 @@ Wire Wire Line
 Connection ~ 3550 2550
 Connection ~ 4400 2550
 Wire Wire Line
-	8850 2650 9900 2650
+	8850 2650 9450 2650
 Wire Wire Line
 	9900 2300 9900 2200
 Wire Wire Line
 	9900 2200 9800 2200
 Connection ~ 9900 2300
 $Comp
-L Connector:Screw_Terminal_01x02 J2
+L Connector:Screw_Terminal_01x02 J8
 U 1 1 60D0EF19
 P 10200 2200
-F 0 "J2" H 10200 2000 50  0000 C CNN
+F 0 "J8" H 10200 2000 50  0000 C CNN
 F 1 "5V 25W" V 10300 2150 50  0000 C CNN
 F 2 "Connectors:Screw_Terminal_2Pin" H 10200 2200 50  0001 C CNN
 F 3 "~" H 10200 2200 50  0001 C CNN
@@ -142,7 +142,7 @@ U 1 1 60D3A11A
 P 4650 1800
 F 0 "SC1" H 4700 1900 50  0000 L CNN
 F 1 "100F/200F" H 4450 1700 50  0000 L CNN
-F 2 "SuperCaps:SCC-30mm" H 4688 1650 50  0001 C CNN
+F 2 "SuperCaps:SCC-22-30mm" H 4688 1650 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/40/AVX_SCC-1920423.pdf" H 4650 1800 50  0001 C CNN
 F 4 "581-SCCW45B107SSB / 581-SCCW45B207SSB" H 4650 1800 50  0001 C CNN "Part#"
 F 5 "Mouser" H 4650 1800 50  0001 C CNN "Vendor"
@@ -155,7 +155,7 @@ U 1 1 60D3A1DD
 P 4650 2350
 F 0 "SC2" H 4700 2450 50  0000 L CNN
 F 1 "100F/200F" H 4450 2250 50  0000 L CNN
-F 2 "SuperCaps:SCC-30mm" H 4688 2200 50  0001 C CNN
+F 2 "SuperCaps:SCC-22-30mm" H 4688 2200 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/40/AVX_SCC-1920423.pdf" H 4650 2350 50  0001 C CNN
 F 4 "581-SCCW45B107SSB / 581-SCCW45B207SSB" H 4650 2350 50  0001 C CNN "Part#"
 F 5 "Mouser" H 4650 2350 50  0001 C CNN "Vendor"
@@ -163,10 +163,10 @@ F 5 "Mouser" H 4650 2350 50  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R1
+L Device:R_US R14
 U 1 1 60D3E583
 P 5600 5050
-F 0 "R1" H 5700 4900 50  0000 R CNN
+F 0 "R14" H 5700 4900 50  0000 R CNN
 F 1 "1k" V 5700 5100 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 5640 5040 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 5600 5050 50  0001 C CNN
@@ -182,11 +182,11 @@ Wire Wire Line
 	10000 2200 9900 2200
 Connection ~ 9900 2200
 $Comp
-L Device:LED D3
+L Device:LED D8
 U 1 1 60D47674
 P 5600 5600
-F 0 "D3" V 5700 5550 50  0000 C CNN
-F 1 "Activity - BLUE" H 5700 5700 50  0000 C CNN
+F 0 "D8" V 5700 5550 50  0000 C CNN
+F 1 "Activity" H 5700 5700 50  0000 C CNN
 F 2 "Diode_SMD:D_1206_3216Metric_Castellated" H 5600 5600 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/109/Dialight_CBI_data_598-1206_Apr2018-1509999.pdf" H 5600 5600 50  0001 C CNN
 F 4 "645-598-8291-107F" H 5600 5600 50  0001 C CNN "Part#"
@@ -195,10 +195,10 @@ F 5 "Mouser" H 5600 5600 50  0001 C CNN "Vendor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x05 J4
+L Connector_Generic:Conn_01x05 J5
 U 1 1 60D76B60
 P 7750 4050
-F 0 "J4" H 7830 4092 50  0000 L CNN
+F 0 "J5" H 7830 4092 50  0000 L CNN
 F 1 "Program" H 7830 4001 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 7750 4050 50  0001 C CNN
 F 3 "~" H 7750 4050 50  0001 C CNN
@@ -213,24 +213,11 @@ U 1 1 60D7F513
 P 6300 3450
 F 0 "C2" V 6250 3300 50  0000 L CNN
 F 1 ".1" V 6250 3500 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6338 3300 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 6338 3300 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/427/VISH_S_A0011539493_1-2572098.pdf" H 6300 3450 50  0001 C CNN
 F 4 "77-VJ1206Y104MXJPBC" H 6300 3450 50  0001 C CNN "Part#"
 F 5 "Mouser" H 6300 3450 50  0001 C CNN "Vendor"
 	1    6300 3450
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J3
-U 1 1 60D90053
-P 950 3250
-F 0 "J3" H 950 3350 50  0000 C CNN
-F 1 "Fan" V 1050 3200 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 950 3250 50  0001 C CNN
-F 3 "~" H 950 3250 50  0001 C CNN
-F 4 "https://www.amazon.com/Header-Lystaii-Pin-Connector-Electronic/dp/B06ZZN8L9S" H 950 3250 50  0001 C CNN "Part#"
-F 5 "Amazon" H 950 3250 50  0001 C CNN "Vendor"
-	1    950  3250
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -238,30 +225,30 @@ Wire Wire Line
 $Comp
 L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q2
 U 1 1 60DBDC58
-P 1400 3250
-F 0 "Q2" V 1250 3000 60  0000 L CNN
-F 1 "BSS806" V 1200 3250 60  0000 L CNN
-F 2 "digikey-footprints:SOT-23-3" H 1600 3450 60  0001 L CNN
-F 3 "https://www.mouser.com/datasheet/2/196/Infineon-BSS806NE-DS-v02_01-en-1226303.pdf" H 1600 3550 60  0001 L CNN
-F 4 "BSS138CT-ND" H 1600 3650 60  0001 L CNN "Digi-Key_PN"
-F 5 "BSS138" H 1600 3750 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 1600 3850 60  0001 L CNN "Category"
-F 7 "Transistors - FETs, MOSFETs - Single" H 1600 3950 60  0001 L CNN "Family"
-F 8 "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF" H 1600 4050 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/on-semiconductor/BSS138/BSS138CT-ND/244294" H 1600 4150 60  0001 L CNN "DK_Detail_Page"
-F 10 "MOSFET N-CH 50V 220MA SOT-23" H 1600 4250 60  0001 L CNN "Description"
-F 11 "ON Semiconductor" H 1600 4350 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 1600 4450 60  0001 L CNN "Status"
-F 13 "726-BSS806NEH6327XTS" H 1400 3250 50  0001 C CNN "Part#"
-F 14 "Mouser" H 1400 3250 50  0001 C CNN "Vendor"
-	1    1400 3250
-	0    -1   -1   0   
+P 1200 3250
+F 0 "Q2" H 1000 3050 60  0000 L CNN
+F 1 "BSS806" H 1000 3500 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 1400 3450 60  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/196/Infineon-BSS806NE-DS-v02_01-en-1226303.pdf" H 1400 3550 60  0001 L CNN
+F 4 "BSS138CT-ND" H 1400 3650 60  0001 L CNN "Digi-Key_PN"
+F 5 "BSS138" H 1400 3750 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 1400 3850 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 1400 3950 60  0001 L CNN "Family"
+F 8 "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF" H 1400 4050 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/BSS138/BSS138CT-ND/244294" H 1400 4150 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET N-CH 50V 220MA SOT-23" H 1400 4250 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 1400 4350 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1400 4450 60  0001 L CNN "Status"
+F 13 "726-BSS806NEH6327XTS" H 1200 3250 50  0001 C CNN "Part#"
+F 14 "Mouser" H 1200 3250 50  0001 C CNN "Vendor"
+	1    1200 3250
+	1    0    0    1   
 $EndComp
 $Comp
-L Device:R_US R2
+L Device:R_US R4
 U 1 1 60DC9969
 P 2350 3650
-F 0 "R2" H 2282 3604 50  0000 R CNN
+F 0 "R4" H 2282 3604 50  0000 R CNN
 F 1 "1k" H 2282 3695 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 2390 3640 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 2350 3650 50  0001 C CNN
@@ -272,12 +259,12 @@ F 5 "Mouser" H 2350 3650 50  0001 C CNN "Vendor"
 $EndComp
 Connection ~ 4500 2150
 $Comp
-L Device:R_US R8
+L Device:R_US R10
 U 1 1 60DD93C0
 P 3450 1100
-F 0 "R8" V 3350 1100 50  0000 R CNN
+F 0 "R10" V 3350 1100 50  0000 R CNN
 F 1 "1R 25W" V 3550 1150 50  0000 R CNN
-F 2 "Connector_Wire:SolderWire-0.25sqmm_1x02_P4.5mm_D0.65mm_OD2mm" V 3490 1090 50  0001 C CNN
+F 2 "Connector_Wire:SolderWire-0.5sqmm_1x02_P4.6mm_D0.9mm_OD2.1mm" V 3490 1090 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/427/VISH_S_A0003599165_1-2569051.pdf" H 3450 1100 50  0001 C CNN
 F 4 "71-RH0251R000FE02" H 3450 1100 50  0001 C CNN "Part#"
 F 5 "Mouser" H 3450 1100 50  0001 C CNN "Vendor"
@@ -307,10 +294,10 @@ F 14 "Mouser" H 6500 2050 50  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R14
+L Device:R_US R17
 U 1 1 60F33A89
 P 6050 3450
-F 0 "R14" H 6000 3250 50  0000 R CNN
+F 0 "R17" H 6000 3250 50  0000 R CNN
 F 1 "9k 0.1%" V 5950 3650 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6090 3440 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 6050 3450 50  0001 C CNN
@@ -320,10 +307,10 @@ F 5 "Mouser" H 6050 3450 50  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R16
+L Device:R_US R20
 U 1 1 60F33B89
 P 6400 5050
-F 0 "R16" V 6350 5300 50  0000 R CNN
+F 0 "R20" V 6350 5300 50  0000 R CNN
 F 1 "1k 0.1%" V 6500 5150 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6440 5040 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 6400 5050 50  0001 C CNN
@@ -333,10 +320,10 @@ F 5 "Mouser" H 6400 5050 50  0001 C CNN "Vendor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_US R7
+L Device:R_US R9
 U 1 1 60F638F8
 P 3350 3450
-F 0 "R7" H 3282 3404 50  0000 R CNN
+F 0 "R9" H 3282 3404 50  0000 R CNN
 F 1 "10k" H 3282 3495 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 3390 3440 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 3350 3450 50  0001 C CNN
@@ -362,43 +349,17 @@ F 5 "Mouser" H 1700 4300 50  0001 C CNN "Vendor"
 $EndComp
 Wire Wire Line
 	3600 1550 4400 1550
-Wire Wire Line
-	1600 3250 1600 3000
-Connection ~ 1600 2550
-Wire Wire Line
-	1500 3550 1500 3650
+Connection ~ 1500 2550
 Wire Wire Line
 	2350 1550 2350 2100
-$Comp
-L dk_Transistors-FETs-MOSFETs-Single:IRF9540NPBF Q3
-U 1 1 60D7BFD0
-P 5750 1550
-F 0 "Q3" V 6000 1550 60  0000 C CNN
-F 1 "SQ3495EV" V 5900 1550 39  0000 C CNN
-F 2 "digikey-footprints:SOT-23-6" H 5950 1750 60  0001 L CNN
-F 3 "https://www.mouser.com/datasheet/2/427/sq3495ev-1868467.pdf" H 5950 1850 60  0001 L CNN
-F 4 "IRF9540NPBF-ND" H 5950 1950 60  0001 L CNN "Digi-Key_PN"
-F 5 "IRF9540NPBF" H 5950 2050 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 5950 2150 60  0001 L CNN "Category"
-F 7 "Transistors - FETs, MOSFETs - Single" H 5950 2250 60  0001 L CNN "Family"
-F 8 "https://www.infineon.com/dgdl/irf9540npbf.pdf?fileId=5546d462533600a401535611cfa21dc8" H 5950 2350 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/infineon-technologies/IRF9540NPBF/IRF9540NPBF-ND/812088" H 5950 2450 60  0001 L CNN "DK_Detail_Page"
-F 10 "MOSFET P-CH 100V 23A TO-220AB" H 5950 2550 60  0001 L CNN "Description"
-F 11 "Infineon Technologies" H 5950 2650 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 5950 2750 60  0001 L CNN "Status"
-F 13 "78-SQ3495EV-T1_GE3" H 5750 1550 50  0001 C CNN "Part#"
-F 14 "Mouser" H 5750 1550 50  0001 C CNN "Vendor"
-	1    5750 1550
-	0    -1   1    0   
-$EndComp
 Connection ~ 2350 1550
 $Comp
-L Diode:1N5817 D7
+L Diode:1N5817 D9
 U 1 1 60D7BD7E
 P 6300 800
-F 0 "D7" H 6250 950 50  0000 L CNN
+F 0 "D9" H 6250 950 50  0000 L CNN
 F 1 "V8PAM10S" H 6150 700 50  0000 L CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6300 625 50  0001 C CNN
+F 2 "Footprint_Library:DO-221BC" H 6300 625 50  0001 C CNN
 F 3 "https://www.vishay.com/doc?87013" H 6300 800 50  0001 C CNN
 F 4 "78-V8PAM10SHM3/H" H 6300 800 50  0001 C CNN "Part#"
 F 5 "Mouser" H 6300 800 50  0001 C CNN "Vendor"
@@ -406,10 +367,10 @@ F 5 "Mouser" H 6300 800 50  0001 C CNN "Vendor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_US R15
+L Device:R_US R18
 U 1 1 60FABD5E
 P 6100 1150
-F 0 "R15" V 6000 1200 50  0000 R CNN
+F 0 "R18" V 6000 1200 50  0000 R CNN
 F 1 "10k" V 6200 1200 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6140 1140 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 6100 1150 50  0001 C CNN
@@ -419,12 +380,12 @@ F 5 "Mouser" H 6100 1150 50  0001 C CNN "Vendor"
 	0    1    1    0   
 $EndComp
 $Comp
-L Diode:1N5817 D4
+L Diode:1N5817 D5
 U 1 1 61077F6E
 P 2650 1550
-F 0 "D4" H 2600 1700 50  0000 L CNN
+F 0 "D5" H 2600 1700 50  0000 L CNN
 F 1 "V8PAM10S" H 2500 1450 50  0000 L CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2650 1375 50  0001 C CNN
+F 2 "Footprint_Library:DO-221BC" H 2650 1375 50  0001 C CNN
 F 3 "https://www.vishay.com/doc?87013" H 2650 1550 50  0001 C CNN
 F 4 "78-V8PAM10SHM3/H" H 2650 1550 50  0001 C CNN "Part#"
 F 5 "Mouser" H 2650 1550 50  0001 C CNN "Vendor"
@@ -434,10 +395,10 @@ $EndComp
 Wire Wire Line
 	2350 1550 2500 1550
 $Comp
-L Device:R_US R13
+L Device:R_US R19
 U 1 1 6106A1D8
 P 6150 5050
-F 0 "R13" V 6100 5300 50  0000 R CNN
+F 0 "R19" V 6100 5300 50  0000 R CNN
 F 1 "1k 0.1%" V 6250 5150 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6190 5040 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 6150 5050 50  0001 C CNN
@@ -447,10 +408,10 @@ F 5 "Mouser" H 6150 5050 50  0001 C CNN "Vendor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_US R12
+L Device:R_US R15
 U 1 1 610A5C7C
 P 5850 3450
-F 0 "R12" H 6000 3650 50  0000 R CNN
+F 0 "R15" H 6000 3650 50  0000 R CNN
 F 1 "9k 0.1%" V 5950 3550 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 5890 3440 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 5850 3450 50  0001 C CNN
@@ -472,10 +433,10 @@ Connection ~ 3350 3200
 Wire Wire Line
 	3350 3200 3550 3200
 $Comp
-L Device:R_US R9
+L Device:R_US R3
 U 1 1 61172CE2
 P 2100 5200
-F 0 "R9" H 2200 5350 50  0000 R CNN
+F 0 "R3" H 2200 5350 50  0000 R CNN
 F 1 "1k" V 2200 5250 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 2140 5190 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 2100 5200 50  0001 C CNN
@@ -485,11 +446,11 @@ F 5 "Mouser" H 2100 5200 50  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D6
+L Device:LED D3
 U 1 1 61172DA4
 P 2100 5600
-F 0 "D6" V 2200 5550 50  0000 C CNN
-F 1 "ShutDown - YELLOW" H 2300 5700 50  0000 C CNN
+F 0 "D3" V 2200 5550 50  0000 C CNN
+F 1 "ShutDown" H 2300 5700 50  0000 C CNN
 F 2 "Diode_SMD:D_1206_3216Metric_Castellated" H 2100 5600 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/109/Dialight_CBI_data_598-1206_Apr2018-1509999.pdf" H 2100 5600 50  0001 C CNN
 F 4 "645-598-8240-107F" H 2100 5600 50  0001 C CNN "Part#"
@@ -498,10 +459,10 @@ F 5 "Mouser" H 2100 5600 50  0001 C CNN "Vendor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_US R17
+L Device:R_US R21
 U 1 1 61172E5C
 P 8400 1800
-F 0 "R17" V 8500 1800 50  0000 R CNN
+F 0 "R21" V 8500 1800 50  0000 R CNN
 F 1 "1k" V 8300 1800 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 8440 1790 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 8400 1800 50  0001 C CNN
@@ -511,11 +472,11 @@ F 5 "Mouser" H 8400 1800 50  0001 C CNN "Vendor"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:LED D8
+L Device:LED D10
 U 1 1 61172EE0
 P 7800 1800
-F 0 "D8" H 7950 1900 50  0000 C CNN
-F 1 "PWRUP - GREEN" H 7750 1650 50  0000 C CNN
+F 0 "D10" H 7950 1900 50  0000 C CNN
+F 1 "PWRUP" H 7750 1650 50  0000 C CNN
 F 2 "Diode_SMD:D_1206_3216Metric_Castellated" H 7800 1800 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/109/Dialight_CBI_data_598-1206_Apr2018-1509999.pdf" H 7800 1800 50  0001 C CNN
 F 4 "645-598-8270-107F" H 7800 1800 50  0001 C CNN "Part#"
@@ -524,23 +485,10 @@ F 5 "Mouser" H 7800 1800 50  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Temperature-Sensors-Analog-and-Digital-Output:MCP9700A-E_TO U2
-U 1 1 60D99757
-P 2100 4250
-F 0 "U2" H 2300 4500 60  0000 R CNN
-F 1 "MCP9700A" H 2450 4000 39  0000 R CNN
-F 2 "digikey-footprints:TO-92-3" H 2300 4450 60  0001 L CNN
-F 3 "https://www.mouser.com/datasheet/2/268/20001942G-1820450.pdf" H 2300 4550 60  0001 L CNN
-F 4 "579-MCP9700A-E/TO" H 2100 4250 50  0001 C CNN "Part#"
-F 5 "Mouser" H 2100 4250 50  0001 C CNN "Vendor"
-	1    2100 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q1
+L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q5
 U 1 1 611B5EF1
 P 1300 4850
-F 0 "Q1" H 1150 4600 60  0000 L CNN
+F 0 "Q5" H 1150 4600 60  0000 L CNN
 F 1 "BSS806" V 1200 5050 60  0000 L CNN
 F 2 "digikey-footprints:SOT-23-3" H 1500 5050 60  0001 L CNN
 F 3 "https://www.mouser.com/datasheet/2/196/Infineon-BSS806NE-DS-v02_01-en-1226303.pdf" H 1500 5150 60  0001 L CNN
@@ -550,10 +498,10 @@ F 5 "Mouser" H 1300 4850 50  0001 C CNN "Vendor"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R3
+L Device:R_US R2
 U 1 1 611BDDB3
 P 1900 4950
-F 0 "R3" H 1832 4904 50  0000 R CNN
+F 0 "R2" H 1832 4904 50  0000 R CNN
 F 1 "1k" H 1832 4995 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 1940 4940 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 1900 4950 50  0001 C CNN
@@ -563,10 +511,10 @@ F 5 "Mouser" H 1900 4950 50  0001 C CNN "Vendor"
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J5
+L Connector_Generic:Conn_01x02 J3
 U 1 1 61219106
 P 950 4750
-F 0 "J5" H 950 4850 50  0000 C CNN
+F 0 "J3" H 950 4850 50  0000 C CNN
 F 1 "Shutdown" V 1050 4700 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 950 4750 50  0001 C CNN
 F 3 "~" H 950 4750 50  0001 C CNN
@@ -580,10 +528,10 @@ Wire Wire Line
 Wire Wire Line
 	3350 3750 6400 3750
 $Comp
-L Pololu:U1V11F5 M3
+L Pololu:U1V11F5 M2
 U 1 1 612BAD59
 P 6550 2850
-F 0 "M3" V 6550 2950 50  0000 C CNN
+F 0 "M2" V 6550 2950 50  0000 C CNN
 F 1 "U1V11F5" V 6300 2850 50  0000 C CNN
 F 2 "Pololu:U1V11Fx" H 6500 2700 50  0001 C CNN
 F 3 "https://www.pololu.com/product/2562" H 6500 2700 50  0001 C CNN
@@ -616,8 +564,6 @@ Wire Wire Line
 Wire Wire Line
 	6850 2900 7150 2900
 Wire Wire Line
-	5950 1550 6600 1550
-Wire Wire Line
 	6450 800  6950 800 
 Wire Wire Line
 	6150 800  5850 800 
@@ -649,7 +595,6 @@ Wire Wire Line
 Connection ~ 6500 2550
 Wire Wire Line
 	6600 1750 6600 1550
-Connection ~ 6600 1550
 Wire Wire Line
 	6600 1550 6950 1550
 Connection ~ 8850 2550
@@ -661,10 +606,10 @@ Connection ~ 3550 3200
 Wire Wire Line
 	3550 4050 3600 4050
 $Comp
-L Device:R_US R6
+L Device:R_US R8
 U 1 1 6124D100
 P 2850 5200
-F 0 "R6" V 2900 5100 50  0000 R CNN
+F 0 "R8" V 2900 5100 50  0000 R CNN
 F 1 "1k 0.1%" V 2750 5300 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 2890 5190 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 2850 5200 50  0001 C CNN
@@ -674,10 +619,10 @@ F 5 "Mouser" H 2850 5200 50  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R5
+L Device:R_US R7
 U 1 1 6124D262
 P 2700 4250
-F 0 "R5" V 2600 4250 50  0000 R CNN
+F 0 "R7" V 2600 4250 50  0000 R CNN
 F 1 "1k 0.1%" V 2800 4350 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 2740 4240 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 2700 4250 50  0001 C CNN
@@ -686,15 +631,11 @@ F 5 "Mouser" H 2700 4250 50  0001 C CNN "Vendor"
 	1    2700 4250
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	1150 3250 1200 3250
-Wire Wire Line
-	1250 3150 1150 3150
 $Comp
-L Device:R_US R18
+L Device:R_US R22
 U 1 1 6123AE3B
 P 8600 3450
-F 0 "R18" H 8750 3600 50  0000 R CNN
+F 0 "R22" H 8750 3600 50  0000 R CNN
 F 1 "50" V 8500 3500 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 8640 3440 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/219/KOA_Speer_RN73__1_-1894048.pdf" H 8600 3450 50  0001 C CNN
@@ -704,10 +645,10 @@ F 5 "Mouser" H 8600 3450 50  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J6
+L Connector_Generic:Conn_01x03 J4
 U 1 1 61262871
 P 1850 2750
-F 0 "J6" V 1816 2562 50  0000 R CNN
+F 0 "J4" V 1816 2562 50  0000 R CNN
 F 1 "12V  5V" V 1950 2900 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1850 2750 50  0001 C CNN
 F 3 "~" H 1850 2750 50  0001 C CNN
@@ -719,11 +660,7 @@ $EndComp
 Wire Wire Line
 	2550 2100 2550 2800
 Wire Wire Line
-	1250 3050 1850 3050
-Wire Wire Line
 	1850 3050 1850 2950
-Wire Wire Line
-	1250 3050 1250 3150
 Wire Wire Line
 	1950 2950 2550 2950
 Wire Wire Line
@@ -732,10 +669,10 @@ Connection ~ 2550 2800
 Wire Wire Line
 	6500 2550 7150 2550
 $Comp
-L Power_Management:BTS443P U3
+L Power_Management:BTS443P U2
 U 1 1 61339414
 P 3150 1550
-F 0 "U3" H 3150 1276 50  0000 C CNN
+F 0 "U2" H 3150 1276 50  0000 C CNN
 F 1 "BTS443P" H 3150 1185 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:TO-252-4" H 3150 1300 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/196/Infineon-BTS443P-DS-v01_00-EN-1226556.pdf" H 3150 1150 50  0001 C CNN
@@ -754,10 +691,10 @@ Wire Wire Line
 	3600 1100 3600 1550
 Connection ~ 3600 1550
 $Comp
-L Device:R_US R4
+L Device:R_US R6
 U 1 1 612FB1DD
 P 2500 5200
-F 0 "R4" H 2600 5350 50  0000 R CNN
+F 0 "R6" H 2600 5350 50  0000 R CNN
 F 1 "1k" V 2600 5250 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 2540 5190 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 2500 5200 50  0001 C CNN
@@ -767,11 +704,11 @@ F 5 "Mouser" H 2500 5200 50  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D5
+L Device:LED D4
 U 1 1 612FB29F
 P 2500 5600
-F 0 "D5" V 2600 5550 50  0000 C CNN
-F 1 "FAULT - RED" H 2550 5700 50  0000 C CNN
+F 0 "D4" V 2600 5550 50  0000 C CNN
+F 1 "FAULT" H 2550 5700 50  0000 C CNN
 F 2 "Diode_SMD:D_1206_3216Metric_Castellated" H 2500 5600 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/109/Dialight_CBI_data_598-1206_Apr2018-1509999.pdf" H 2500 5600 50  0001 C CNN
 F 4 "645-598-8220-107F" H 2500 5600 50  0001 C CNN "Part#"
@@ -780,10 +717,10 @@ F 5 "Mouser" H 2500 5600 50  0001 C CNN "Vendor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_US R11
+L Device:R_US R16
 U 1 1 61370107
 P 5900 5050
-F 0 "R11" V 5850 5300 50  0000 R CNN
+F 0 "R16" V 5850 5300 50  0000 R CNN
 F 1 "1k 0.1%" V 6000 5150 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 5940 5040 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 5900 5050 50  0001 C CNN
@@ -793,10 +730,10 @@ F 5 "Mouser" H 5900 5050 50  0001 C CNN "Vendor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_US R10
+L Device:R_US R13
 U 1 1 61391589
 P 5600 3450
-F 0 "R10" H 5550 3250 50  0000 R CNN
+F 0 "R13" H 5550 3250 50  0000 R CNN
 F 1 "9k 0.1%" V 5500 3650 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 5640 3440 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 5600 3450 50  0001 C CNN
@@ -809,9 +746,6 @@ Wire Wire Line
 	5600 3600 5600 4550
 Wire Wire Line
 	5450 1550 5450 1900
-Connection ~ 5450 1550
-Wire Wire Line
-	5450 1550 5550 1550
 Wire Wire Line
 	5450 1900 6050 1900
 Wire Wire Line
@@ -828,10 +762,10 @@ Wire Wire Line
 	6400 5200 6400 5850
 Connection ~ 6400 5850
 $Comp
-L Connector_Generic:Conn_01x02 J7
+L Connector_Generic:Conn_01x02 J6
 U 1 1 61532FB5
 P 7750 4700
-F 0 "J7" H 7750 4800 50  0000 C CNN
+F 0 "J6" H 7750 4800 50  0000 C CNN
 F 1 "Serial Debug" H 8050 4650 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7750 4700 50  0001 C CNN
 F 3 "~" H 7750 4700 50  0001 C CNN
@@ -875,19 +809,6 @@ Wire Wire Line
 	2100 3200 3350 3200
 Wire Wire Line
 	6800 2050 6900 2050
-$Comp
-L Geekgineering:MCP1501-XX VRef1
-U 1 1 6142C50A
-P 7950 3350
-F 0 "VRef1" H 7950 3765 50  0000 C CNN
-F 1 "MCP1501-10" H 7950 3674 50  0000 C CNN
-F 2 "digikey-footprints:SOT-23-6" H 7700 3300 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/268/MCHP_S_A0012115150_1-2576319.pdf" H 7700 3300 50  0001 C CNN
-F 4 "579-MCP1501T-10E/CHY" H 7950 3350 50  0001 C CNN "Part#"
-F 5 "Mouser" H 7950 3350 50  0001 C CNN "Vendor"
-	1    7950 3350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8750 1800 8750 5950
 Wire Wire Line
@@ -920,44 +841,17 @@ Wire Wire Line
 Wire Wire Line
 	6850 3200 7300 3200
 Wire Wire Line
-	7400 3200 7400 3400
-Wire Wire Line
-	7400 3400 7600 3400
-Connection ~ 7400 3200
-Wire Wire Line
-	7400 3200 7600 3200
-Wire Wire Line
-	7600 3300 7500 3300
-Wire Wire Line
-	7500 3300 7500 3500
-Wire Wire Line
-	7500 3500 7600 3500
-Wire Wire Line
-	7500 3500 7500 3650
-Wire Wire Line
-	7500 3650 8350 3650
-Wire Wire Line
 	8350 3650 8350 3500
 Wire Wire Line
 	8350 3500 8300 3500
-Connection ~ 7500 3500
-Wire Wire Line
-	8350 3500 8350 3400
-Wire Wire Line
-	8350 3400 8300 3400
 Connection ~ 8350 3500
 Wire Wire Line
 	8300 3200 8450 3200
-Wire Wire Line
-	8450 3200 8450 3300
-Wire Wire Line
-	8450 3300 8300 3300
-Connection ~ 8450 3300
 $Comp
-L Device:CP C5
+L Device:CP C4
 U 1 1 61592D61
 P 8600 3850
-F 0 "C5" V 8650 3950 50  0000 C CNN
+F 0 "C4" V 8650 3950 50  0000 C CNN
 F 1 "2.2uF Tant" V 8650 3600 50  0000 C CNN
 F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A" H 8638 3700 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/212/1/KEM_T2005_T491-1093550.pdf" H 8600 3850 50  0001 C CNN
@@ -967,10 +861,10 @@ F 5 "Mouser" V 8600 3850 50  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP C4
+L Device:CP C3
 U 1 1 61592E79
 P 7300 3500
-F 0 "C4" V 7350 3600 50  0000 C CNN
+F 0 "C3" V 7350 3600 50  0000 C CNN
 F 1 "2.2uF Tant" H 7350 3250 50  0000 C CNN
 F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A" H 7338 3350 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/212/1/KEM_T2005_T491-1093550.pdf" H 7300 3500 50  0001 C CNN
@@ -982,11 +876,6 @@ $EndComp
 Wire Wire Line
 	7300 3350 7300 3200
 Connection ~ 7300 3200
-Wire Wire Line
-	7300 3200 7400 3200
-Wire Wire Line
-	7300 3650 7500 3650
-Connection ~ 7500 3650
 Wire Wire Line
 	8350 3650 8350 4000
 Connection ~ 8350 3650
@@ -1002,10 +891,10 @@ Connection ~ 7450 4250
 Wire Wire Line
 	7450 4250 7550 4250
 $Comp
-L Connector_Generic:Conn_01x02 J8
+L Connector_Generic:Conn_01x02 J7
 U 1 1 6163CC12
 P 8250 4350
-F 0 "J8" H 8250 4450 50  0000 C CNN
+F 0 "J7" H 8250 4450 50  0000 C CNN
 F 1 "REMOVE to PRGM" V 8350 4300 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8250 4350 50  0001 C CNN
 F 3 "~" H 8250 4350 50  0001 C CNN
@@ -1020,13 +909,11 @@ Wire Wire Line
 	7450 4550 8150 4550
 Wire Wire Line
 	7450 4250 7450 4550
-Wire Wire Line
-	8450 3300 8450 4550
 $Comp
-L Geekgineering:XL4015 M2
+L Geekgineering:XL4015 M1
 U 1 1 616B4815
 P 1950 2200
-F 0 "M2" H 1950 2565 50  0000 C CNN
+F 0 "M1" H 1950 2565 50  0000 C CNN
 F 1 "XL4015" H 1950 2474 50  0000 C CNN
 F 2 "Footprint_Library:XL4015" H 1950 2200 50  0001 C CNN
 F 3 "" H 1950 2200 50  0001 C CNN
@@ -1035,9 +922,6 @@ F 5 "Amazon" H 1950 2200 50  0001 C CNN "Vendor"
 	1    1950 2200
 	1    0    0    -1  
 $EndComp
-Connection ~ 5550 1550
-Wire Wire Line
-	5550 1550 5600 1550
 Wire Wire Line
 	6050 1900 6050 3300
 $Comp
@@ -1165,8 +1049,6 @@ Wire Wire Line
 Wire Wire Line
 	3050 1850 3050 4450
 Wire Wire Line
-	1500 3650 2200 3650
-Wire Wire Line
 	2500 3650 3250 3650
 Wire Wire Line
 	3250 3650 3250 4150
@@ -1203,14 +1085,14 @@ Wire Wire Line
 Wire Wire Line
 	3000 5950 3000 4550
 Wire Wire Line
-	3000 4550 3600 4550
+	3000 4550 3100 4550
 Wire Wire Line
 	3000 5950 8750 5950
 $Comp
-L Device:R_US R20
+L Device:R_US R11
 U 1 1 616034BD
 P 3550 5200
-F 0 "R20" H 3700 5050 50  0000 R CNN
+F 0 "R11" H 3700 5050 50  0000 R CNN
 F 1 "1k" V 3650 5250 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 3590 5190 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 3550 5200 50  0001 C CNN
@@ -1220,11 +1102,11 @@ F 5 "Mouser" H 3550 5200 50  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D10
+L Device:LED D6
 U 1 1 61603573
 P 3550 5600
-F 0 "D10" V 3650 5500 50  0000 C CNN
-F 1 "MAINPWR - GREEN" H 3700 5700 50  0000 C CNN
+F 0 "D6" V 3650 5500 50  0000 C CNN
+F 1 "MAINPWR" H 3700 5700 50  0000 C CNN
 F 2 "Diode_SMD:D_1206_3216Metric_Castellated" H 3550 5600 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/109/Dialight_CBI_data_598-1206_Apr2018-1509999.pdf" H 3550 5600 50  0001 C CNN
 F 4 "645-598-8270-107F" H 3550 5600 50  0001 C CNN "Part#"
@@ -1244,7 +1126,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 4950 3600 4950
 Wire Wire Line
-	1600 2550 2450 2550
+	1500 2550 2450 2550
 Connection ~ 2350 2100
 Wire Wire Line
 	2350 2300 2450 2300
@@ -1262,13 +1144,11 @@ Wire Wire Line
 Connection ~ 1500 2300
 Wire Wire Line
 	1500 2300 1550 2300
-Wire Wire Line
-	1500 2550 1600 2550
 $Comp
-L dk_Transistors-FETs-MOSFETs-Single:IRF9540NPBF Q5
+L dk_Transistors-FETs-MOSFETs-Single:IRF9540NPBF Q3
 U 1 1 61686301
 P 1300 1000
-F 0 "Q5" V 1567 1000 60  0000 C CNN
+F 0 "Q3" V 1567 1000 60  0000 C CNN
 F 1 "SPD18P06PGBTMA1" V 1461 1000 60  0000 C CNN
 F 2 "Package_TO_SOT_SMD:TO-252-3_TabPin2" H 1500 1200 60  0001 L CNN
 F 3 "https://www.mouser.com/datasheet/2/196/Infineon-SPD18P06P-DS-v03_04-en-1225203.pdf" H 1500 1300 60  0001 L CNN
@@ -1289,10 +1169,10 @@ $EndComp
 Wire Wire Line
 	950  1000 1100 1000
 $Comp
-L Device:R_US R19
+L Device:R_US R1
 U 1 1 616AD35C
 P 1350 1450
-F 0 "R19" H 1282 1404 50  0000 R CNN
+F 0 "R1" H 1282 1404 50  0000 R CNN
 F 1 "10k" H 1282 1495 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 1390 1440 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 1350 1450 50  0001 C CNN
@@ -1318,10 +1198,10 @@ Wire Wire Line
 Connection ~ 1450 2100
 Connection ~ 1600 1450
 $Comp
-L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q4
+L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q1
 U 1 1 616FF38B
 P 1200 2750
-F 0 "Q4" H 900 2800 60  0000 L CNN
+F 0 "Q1" H 900 2800 60  0000 L CNN
 F 1 "BSS806" H 700 2900 60  0000 L CNN
 F 2 "digikey-footprints:SOT-23-3" H 1400 2950 60  0001 L CNN
 F 3 "https://www.mouser.com/datasheet/2/196/Infineon-BSS806NE-DS-v02_01-en-1226303.pdf" H 1400 3050 60  0001 L CNN
@@ -1352,19 +1232,18 @@ Wire Wire Line
 Wire Wire Line
 	1200 1450 1200 1900
 Wire Wire Line
-	1450 2950 1750 2950
+	1450 2950 1650 2950
 Wire Wire Line
 	1200 2950 1200 3000
 Wire Wire Line
-	1200 3000 1600 3000
-Connection ~ 1600 3000
+	1200 3000 1450 3000
 Wire Wire Line
-	1600 3000 1600 2550
+	1500 3000 1500 2550
 $Comp
-L Diode:1N914 D9
+L Diode:1N914 D2
 U 1 1 617DB464
 P 1050 1900
-F 0 "D9" H 1050 2117 50  0000 C CNN
+F 0 "D2" H 1050 2117 50  0000 C CNN
 F 1 "1N914" H 1050 2026 50  0000 C CNN
 F 2 "Diode_SMD:D_SOD-123F" H 1050 1725 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/395/1N4148W_SERIES_K1804-1918054.pdf" H 1050 1900 50  0001 C CNN
@@ -1377,28 +1256,10 @@ Connection ~ 1200 1900
 Wire Wire Line
 	1200 1900 1200 2550
 $Comp
-L Connector:Screw_Terminal_01x02 J9
-U 1 1 617DB54E
-P 700 2300
-F 0 "J9" H 700 2100 50  0000 C CNN
-F 1 "Main PWR SW" V 800 2250 50  0000 C CNN
-F 2 "Connectors:Screw_Terminal_2Pin" H 700 2300 50  0001 C CNN
-F 3 "~" H 700 2300 50  0001 C CNN
-F 4 "https://www.amazon.com/Pieces-Pinch-Mount-Terminal-Connector/dp/B01MT4LC0F" H 700 2300 50  0001 C CNN "Part#"
-F 5 "Amazon" H 700 2300 50  0001 C CNN "Vendor"
-	1    700  2300
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	900  1900 900  2200
-Wire Wire Line
-	900  2300 1350 2300
-Connection ~ 1350 2300
-$Comp
-L Device:R_US R21
+L Device:R_US R12
 U 1 1 61524535
 P 5300 3450
-F 0 "R21" H 5232 3404 50  0000 R CNN
+F 0 "R12" H 5232 3404 50  0000 R CNN
 F 1 "10k" H 5232 3495 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 5340 3440 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 5300 3450 50  0001 C CNN
@@ -1408,27 +1269,20 @@ F 5 "Mouser" H 5300 3450 50  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N914 D11
+L Diode:1N914 D1
 U 1 1 61527237
-P 650 2900
-F 0 "D11" H 800 2950 50  0000 C CNN
-F 1 "1N914" H 650 2800 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123F" H 650 2725 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/395/1N4148W_SERIES_K1804-1918054.pdf" H 650 2900 50  0001 C CNN
-F 4 "821-1N914BWRHG" H 650 2900 50  0001 C CNN "Part#"
-F 5 "Mouser" H 650 2900 50  0001 C CNN "Vendor"
-	1    650  2900
+P 650 4900
+F 0 "D1" H 800 4950 50  0000 C CNN
+F 1 "1N914" H 650 4800 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 650 4725 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/395/1N4148W_SERIES_K1804-1918054.pdf" H 650 4900 50  0001 C CNN
+F 4 "821-1N914BWRHG" H 650 4900 50  0001 C CNN "Part#"
+F 5 "Mouser" H 650 4900 50  0001 C CNN "Vendor"
+	1    650  4900
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	900  2200 1000 2200
-Wire Wire Line
-	1000 2200 1000 2550
-Wire Wire Line
-	1000 2550 650  2550
-Wire Wire Line
-	650  2550 650  2750
-Connection ~ 900  2200
+	900  1900 650  1900
 Wire Wire Line
 	650  6050 5300 6050
 Wire Wire Line
@@ -1459,8 +1313,6 @@ Wire Wire Line
 	5300 3200 6300 3200
 Wire Wire Line
 	1700 3200 1700 4150
-Wire Wire Line
-	650  3050 650  6050
 Wire Wire Line
 	750  3750 3200 3750
 Wire Wire Line
@@ -1500,10 +1352,10 @@ Wire Wire Line
 Text Notes 5100 2150 0    50   ~ 0
 200mV Diff MAX
 $Comp
-L Diode:BAT54SW D1
+L Diode:BAT54SW D7
 U 1 1 6175D0B5
 P 5000 2150
-F 0 "D1" V 4850 2200 50  0000 L CNN
+F 0 "D7" V 4850 2200 50  0000 L CNN
 F 1 "BAT54SW" V 4750 2200 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 5075 2275 50  0001 L CNN
 F 3 "https://www.mouser.com/datasheet/2/916/BAT54W_SER-1598288.pdf" H 4880 2150 50  0001 C CNN
@@ -1548,4 +1400,366 @@ Wire Wire Line
 Connection ~ 5000 2550
 Wire Wire Line
 	5000 2550 6250 2550
+$Comp
+L Geekgineering:MCP1501-6Pin VRef1
+U 1 1 617BC6DF
+P 7950 3350
+F 0 "VRef1" H 7950 3765 50  0000 C CNN
+F 1 "MCP1501-6Pin" H 7950 3674 50  0000 C CNN
+F 2 "digikey-footprints:SOT-23-6" H 7700 3300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/268/MCHP_S_A0012115150_1-2576319.pdf" H 7700 3300 50  0001 C CNN
+F 4 "579-MCP1501T-10E/CHY" H 7950 3350 50  0001 C CNN "Part#"
+F 5 "Mouser" H 7950 3350 50  0001 C CNN "Vendor"
+	1    7950 3350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3200 8450 4550
+Wire Wire Line
+	8300 3350 8350 3350
+Wire Wire Line
+	8350 3350 8350 3500
+Wire Wire Line
+	7300 3650 7550 3650
+Wire Wire Line
+	7300 3200 7500 3200
+Wire Wire Line
+	7500 3200 7500 3500
+Wire Wire Line
+	7500 3500 7600 3500
+Connection ~ 7500 3200
+Wire Wire Line
+	7500 3200 7600 3200
+Wire Wire Line
+	7600 3350 7550 3350
+Wire Wire Line
+	7550 3350 7550 3650
+Connection ~ 7550 3650
+Wire Wire Line
+	7550 3650 8350 3650
+$Comp
+L Geekgineering:SQ3495-EV Q6
+U 1 1 61796DDD
+P 5850 1450
+F 0 "Q6" V 6099 1450 50  0000 C CNN
+F 1 "SQ3495-EV" V 6190 1450 50  0000 C CNN
+F 2 "digikey-footprints:SOT-23-6" H 6050 1550 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/427/sq3495ev-1868467.pdf" H 5850 1450 50  0001 C CNN
+F 4 "78-SQ3495EV-T1_GE3" V 5850 1450 50  0001 C CNN "Part#"
+F 5 "Mouser" V 5850 1450 50  0001 C CNN "Vendor"
+	1    5850 1450
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	6050 1550 6600 1550
+Connection ~ 6600 1550
+Wire Wire Line
+	5650 1550 5450 1550
+Connection ~ 5450 1550
+Wire Wire Line
+	1200 3050 1200 3000
+Connection ~ 1200 3000
+Wire Wire Line
+	1200 3450 1550 3450
+Wire Wire Line
+	1550 3450 1550 3050
+Wire Wire Line
+	1550 3050 1850 3050
+Wire Wire Line
+	900  3150 900  3650
+Wire Wire Line
+	900  3650 2200 3650
+$Comp
+L dk_Temperature-Sensors-Analog-and-Digital-Output:MCP9700A-E_TO U1
+U 1 1 60D99757
+P 2100 4250
+F 0 "U1" H 2300 4500 60  0000 R CNN
+F 1 "MCP9700A" H 2450 4000 39  0000 R CNN
+F 2 "digikey-footprints:SOT-23-3" H 2300 4450 60  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/268/20001942G-1820450.pdf" H 2300 4550 60  0001 L CNN
+F 4 "579-MCP9700AT-E/TT" H 2100 4250 50  0001 C CNN "Part#"
+F 5 "Mouser" H 2100 4250 50  0001 C CNN "Vendor"
+	1    2100 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q4
+U 1 1 61886FFF
+P 1300 4050
+F 0 "Q4" H 1100 3850 60  0000 L CNN
+F 1 "BSS806" H 1100 4300 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 1500 4250 60  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/196/Infineon-BSS806NE-DS-v02_01-en-1226303.pdf" H 1500 4350 60  0001 L CNN
+F 4 "BSS138CT-ND" H 1500 4450 60  0001 L CNN "Digi-Key_PN"
+F 5 "BSS138" H 1500 4550 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 1500 4650 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 1500 4750 60  0001 L CNN "Family"
+F 8 "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF" H 1500 4850 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/BSS138/BSS138CT-ND/244294" H 1500 4950 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET N-CH 50V 220MA SOT-23" H 1500 5050 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 1500 5150 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1500 5250 60  0001 L CNN "Status"
+F 13 "726-BSS806NEH6327XTS" H 1300 4050 50  0001 C CNN "Part#"
+F 14 "Mouser" H 1300 4050 50  0001 C CNN "Vendor"
+	1    1300 4050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R5
+U 1 1 6188AD26
+P 2450 3850
+F 0 "R5" V 2550 3850 50  0000 R CNN
+F 1 "1k" V 2350 3850 50  0000 R CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 2490 3840 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 2450 3850 50  0001 C CNN
+F 4 "603-RT1206FRD071KL" H 2450 3850 50  0001 C CNN "Part#"
+F 5 "Mouser" H 2450 3850 50  0001 C CNN "Vendor"
+	1    2450 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	650  5050 650  6050
+Wire Wire Line
+	1450 3000 1450 3850
+Wire Wire Line
+	1450 3850 1300 3850
+Connection ~ 1450 3000
+Wire Wire Line
+	1450 3000 1500 3000
+Connection ~ 1300 3850
+Wire Wire Line
+	950  3950 950  3850
+Wire Wire Line
+	950  3850 1300 3850
+$Comp
+L Connector_Generic:Conn_01x05 J2
+U 1 1 61A1D421
+P 750 4150
+F 0 "J2" H 700 4450 50  0000 L CNN
+F 1 "Power Switch" V 900 3900 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical" H 750 4150 50  0001 C CNN
+F 3 "~" H 750 4150 50  0001 C CNN
+F 4 "https://www.amazon.com/Header-Lystaii-Pin-Connector-Electronic/dp/B06ZZN8L9S" H 750 4150 50  0001 C CNN "Part#"
+F 5 "Amazon" H 750 4150 50  0001 C CNN "Vendor"
+	1    750  4150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	650  3800 1000 3800
+Wire Wire Line
+	1000 3800 1000 4050
+Wire Wire Line
+	1000 4050 950  4050
+Connection ~ 650  3800
+Wire Wire Line
+	650  3800 650  4750
+Wire Wire Line
+	950  4350 1300 4350
+Wire Wire Line
+	1300 4350 1300 4250
+Wire Wire Line
+	1650 2950 1650 3600
+Wire Wire Line
+	1650 3600 1050 3600
+Wire Wire Line
+	1050 3600 1050 4150
+Wire Wire Line
+	1050 4150 950  4150
+Connection ~ 1650 2950
+Wire Wire Line
+	1650 2950 1750 2950
+Wire Wire Line
+	650  1900 650  3800
+Wire Wire Line
+	1600 3950 1950 3950
+Wire Wire Line
+	1950 3950 1950 3850
+Wire Wire Line
+	1950 3850 2300 3850
+Wire Wire Line
+	2600 3850 3100 3850
+Wire Wire Line
+	3100 3850 3100 4550
+Connection ~ 3100 4550
+Wire Wire Line
+	3100 4550 3600 4550
+Wire Wire Line
+	1100 4250 1100 4500
+Wire Wire Line
+	1100 4500 800  4500
+Wire Wire Line
+	800  4500 800  6150
+Wire Wire Line
+	9900 1900 10400 1900
+Wire Wire Line
+	800  6150 10400 6150
+Connection ~ 9900 1900
+Wire Wire Line
+	950  4250 1100 4250
+$Comp
+L Geekgineering:MR44V100AMAZAATL U6
+U 1 1 61BD796D
+P 9800 4100
+F 0 "U6" H 9800 4475 50  0000 C CNN
+F 1 "MB85RC1MT" H 9800 4384 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 10000 4100 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/1113/MB85RC1MT_DS501_00027_4v0_E-2329088.pdf" H 10000 4100 50  0001 C CNN
+F 4 "249-85C1MTPNFGJNERE1" H 9800 4100 50  0001 C CNN "Part#"
+F 5 "Mouser" H 9800 4100 50  0001 C CNN "Vendor"
+	1    9800 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R23
+U 1 1 61BD8C4D
+P 9200 3250
+F 0 "R23" H 9150 3400 50  0000 R CNN
+F 1 "10k" V 9100 3300 50  0000 R CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9240 3240 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 9200 3250 50  0001 C CNN
+F 4 "603-RT1206FRD0710KL" H 9200 3250 50  0001 C CNN "Part#"
+F 5 "Mouser" H 9200 3250 50  0001 C CNN "Vendor"
+	1    9200 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R24
+U 1 1 61BDA65A
+P 9350 3250
+F 0 "R24" H 9500 3400 50  0000 R CNN
+F 1 "10k" V 9250 3300 50  0000 R CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9390 3240 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 9350 3250 50  0001 C CNN
+F 4 "603-RT1206FRD0710KL" H 9350 3250 50  0001 C CNN "Part#"
+F 5 "Mouser" H 9350 3250 50  0001 C CNN "Vendor"
+	1    9350 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J9
+U 1 1 61BDBF15
+P 8950 4250
+F 0 "J9" H 9000 4050 50  0000 R CNN
+F 1 "FRAM I2C" V 9050 4400 50  0000 R CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 8950 4250 50  0001 C CNN
+F 3 "~" H 8950 4250 50  0001 C CNN
+F 4 "https://www.amazon.com/Header-Lystaii-Pin-Connector-Electronic/dp/B06ZZN8L9S" H 8950 4250 50  0001 C CNN "Part#"
+F 5 "Amazon" H 8950 4250 50  0001 C CNN "Vendor"
+	1    8950 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Regulator_Linear:MCP1700-3302E_SOT23 U7
+U 1 1 61BE1D95
+P 9900 2950
+F 0 "U7" H 9900 3192 50  0000 C CNN
+F 1 "MCP1700-3302E_SOT23" H 9900 3101 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9900 3175 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/268/MCP1700_Data_Sheet_20001826F-737536.pdf" H 9900 2950 50  0001 C CNN
+F 4 "579-MCP1700T3302E/TT" H 9900 2950 50  0001 C CNN "Part#"
+	1    9900 2950
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 10150 3950
+Wire Wire Line
+	8900 2950 8900 3950
+Wire Wire Line
+	10400 1900 10400 2950
+$Comp
+L Device:CP C5
+U 1 1 61CD17BC
+P 9550 3250
+F 0 "C5" H 9600 3350 50  0000 C CNN
+F 1 "1uF" H 9650 3150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 9588 3100 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1023_X7R_AUTO_SMD-1093309.pdf" H 9550 3250 50  0001 C CNN
+F 4 "80-C1206C105K3RAUTO" V 9550 3250 50  0001 C CNN "Part#"
+F 5 "Mouser" V 9550 3250 50  0001 C CNN "Vendor"
+	1    9550 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 2950 10250 2950
+Connection ~ 10400 2950
+Wire Wire Line
+	10250 3100 10250 2950
+Connection ~ 10250 2950
+Wire Wire Line
+	10250 2950 10400 2950
+Wire Wire Line
+	8900 2950 9200 2950
+Wire Wire Line
+	9550 3100 9550 2950
+Connection ~ 9550 2950
+Wire Wire Line
+	9550 2950 9600 2950
+Wire Wire Line
+	9550 3400 9900 3400
+Wire Wire Line
+	9900 3400 9900 3250
+Wire Wire Line
+	9900 3400 10250 3400
+Connection ~ 9900 3400
+Wire Wire Line
+	10400 2950 10400 6150
+$Comp
+L Device:CP C6
+U 1 1 61CD00B5
+P 10250 3250
+F 0 "C6" H 10300 3350 50  0000 C CNN
+F 1 "1uF" H 10150 3150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 10288 3100 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1023_X7R_AUTO_SMD-1093309.pdf" H 10250 3250 50  0001 C CNN
+F 4 "80-C1206C105K3RAUTO" V 10250 3250 50  0001 C CNN "Part#"
+F 5 "Mouser" V 10250 3250 50  0001 C CNN "Vendor"
+	1    10250 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 3400 10250 4250
+Wire Wire Line
+	10250 4250 10150 4250
+Connection ~ 10250 3400
+Wire Wire Line
+	9150 4350 10250 4350
+Wire Wire Line
+	10250 4350 10250 4250
+Connection ~ 10250 4250
+Wire Wire Line
+	8900 3950 9450 3950
+Wire Wire Line
+	9150 4250 9350 4250
+Wire Wire Line
+	9150 4150 9200 4150
+Wire Wire Line
+	9200 3100 9200 2950
+Connection ~ 9200 2950
+Wire Wire Line
+	9200 2950 9350 2950
+Wire Wire Line
+	9350 3100 9350 2950
+Connection ~ 9350 2950
+Wire Wire Line
+	9350 2950 9550 2950
+Wire Wire Line
+	9200 3400 9200 4150
+Connection ~ 9200 4150
+Wire Wire Line
+	9200 4150 9450 4150
+Wire Wire Line
+	9350 3400 9350 4250
+Connection ~ 9350 4250
+Wire Wire Line
+	9350 4250 9450 4250
+NoConn ~ 10150 4050
+NoConn ~ 10150 4150
+NoConn ~ 9450 4050
+Wire Wire Line
+	9450 2650 9450 3400
+Wire Wire Line
+	9450 3400 9550 3400
+Connection ~ 9450 2650
+Wire Wire Line
+	9450 2650 9900 2650
+Connection ~ 9550 3400
 $EndSCHEMATC

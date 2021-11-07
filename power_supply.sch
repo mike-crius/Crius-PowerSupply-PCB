@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "CommCube Power Supply"
 Date "2021-09-26"
-Rev "0.37"
+Rev "1.00"
 Comp "Crius Technology Group"
 Comment1 ""
 Comment2 ""

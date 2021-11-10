@@ -6,12 +6,12 @@ encoding utf-8
 Sheet 1 1
 Title "CommCube Power Supply"
 Date "2021-09-26"
-Rev "1.00"
+Rev "1.01"
 Comp "Crius Technology Group"
-Comment1 ""
-Comment2 ""
-Comment3 ""
-Comment4 ""
+Comment1 " not allow splurious signals to bootstrap Q3"
+Comment2 "Added Q7 and D11 to monitor PIC power. Below 3v3 will"
+Comment3 "Added C7"
+Comment4 "Validated footprints"
 $EndDescr
 $Comp
 L Pololu:U3V70F5 M3
@@ -119,15 +119,15 @@ Wire Wire Line
 $Comp
 L Connector:Screw_Terminal_01x02 J1
 U 1 1 60D128AA
-P 750 1650
-F 0 "J1" H 750 1450 50  0000 C CNN
-F 1 "12v, 0.5A nominal, 5A Surge" V 850 1100 50  0000 C CNN
-F 2 "Connectors:Screw_Terminal_2Pin" H 750 1650 50  0001 C CNN
-F 3 "~" H 750 1650 50  0001 C CNN
-F 4 "https://www.amazon.com/Pieces-Pinch-Mount-Terminal-Connector/dp/B01MT4LC0F" H 750 1650 50  0001 C CNN "Part#"
-F 5 "Amazon" H 750 1650 50  0001 C CNN "Vendor"
-	1    750  1650
-	-1   0    0    1   
+P 650 900
+F 0 "J1" H 650 700 50  0000 C CNN
+F 1 "12v, 0.5A nominal, 5A Surge" V 750 750 50  0000 C CNN
+F 2 "Connectors:Screw_Terminal_2Pin" H 650 900 50  0001 C CNN
+F 3 "~" H 650 900 50  0001 C CNN
+F 4 "https://www.amazon.com/Pieces-Pinch-Mount-Terminal-Connector/dp/B01MT4LC0F" H 650 900 50  0001 C CNN "Part#"
+F 5 "Amazon" H 650 900 50  0001 C CNN "Vendor"
+	1    650  900 
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	9900 2300 9900 2400
@@ -272,28 +272,6 @@ F 5 "Mouser" H 3450 1100 50  0001 C CNN "Vendor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L dk_PMIC-Supervisors:MCP130T-300I_TT U5
-U 1 1 60F339DC
-P 6500 2050
-F 0 "U5" H 6500 2350 60  0000 R CNN
-F 1 "MCP111-195" V 6350 2350 60  0000 R CNN
-F 2 "digikey-footprints:SOT-23-3" H 6700 2250 60  0001 L CNN
-F 3 "https://www.mouser.com/datasheet/2/268/MCHP_S_A0002312823_1-2520721.pdf" H 6700 2350 60  0001 L CNN
-F 4 "MCP130T-300I/TTCT-ND" H 6700 2450 60  0001 L CNN "Digi-Key_PN"
-F 5 "MCP130T-300I/TT" H 6700 2550 60  0001 L CNN "MPN"
-F 6 "Integrated Circuits (ICs)" H 6700 2650 60  0001 L CNN "Category"
-F 7 "PMIC - Supervisors" H 6700 2750 60  0001 L CNN "Family"
-F 8 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en011325" H 6700 2850 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/microchip-technology/MCP130T-300I-TT/MCP130T-300I-TTCT-ND/275294" H 6700 2950 60  0001 L CNN "DK_Detail_Page"
-F 10 "IC SUPERVISOR 3.00V LOW SOT23" H 6700 3050 60  0001 L CNN "Description"
-F 11 "Microchip Technology" H 6700 3150 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 6700 3250 60  0001 L CNN "Status"
-F 13 "579-MCP111T-195I/TT" H 6500 2050 50  0001 C CNN "Part#"
-F 14 "Mouser" H 6500 2050 50  0001 C CNN "Vendor"
-	1    6500 2050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_US R17
 U 1 1 60F33A89
 P 6050 3450
@@ -349,10 +327,6 @@ F 5 "Mouser" H 1700 4300 50  0001 C CNN "Vendor"
 $EndComp
 Wire Wire Line
 	3600 1550 4400 1550
-Connection ~ 1500 2550
-Wire Wire Line
-	2350 1550 2350 2100
-Connection ~ 2350 1550
 $Comp
 L Diode:1N5817 D9
 U 1 1 60D7BD7E
@@ -392,8 +366,6 @@ F 5 "Mouser" H 2650 1550 50  0001 C CNN "Vendor"
 	1    2650 1550
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	2350 1550 2500 1550
 $Comp
 L Device:R_US R19
 U 1 1 6106A1D8
@@ -420,8 +392,6 @@ F 5 "Mouser" H 5850 3450 50  0001 C CNN "Vendor"
 	1    5850 3450
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	2550 2100 2350 2100
 Wire Wire Line
 	3350 3750 3350 4350
 Connection ~ 3350 3750
@@ -474,22 +444,22 @@ $EndComp
 $Comp
 L Device:LED D10
 U 1 1 61172EE0
-P 7800 1800
-F 0 "D10" H 7950 1900 50  0000 C CNN
-F 1 "PWRUP" H 7750 1650 50  0000 C CNN
-F 2 "Diode_SMD:D_1206_3216Metric_Castellated" H 7800 1800 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/109/Dialight_CBI_data_598-1206_Apr2018-1509999.pdf" H 7800 1800 50  0001 C CNN
-F 4 "645-598-8270-107F" H 7800 1800 50  0001 C CNN "Part#"
-F 5 "Mouser" H 7800 1800 50  0001 C CNN "Vendor"
-	1    7800 1800
-	1    0    0    -1  
+P 7950 2100
+F 0 "D10" V 8100 2200 50  0000 C CNN
+F 1 "PWRUP" V 7800 1850 50  0000 C CNN
+F 2 "Diode_SMD:D_1206_3216Metric_Castellated" H 7950 2100 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/109/Dialight_CBI_data_598-1206_Apr2018-1509999.pdf" H 7950 2100 50  0001 C CNN
+F 4 "645-598-8270-107F" H 7950 2100 50  0001 C CNN "Part#"
+F 5 "Mouser" H 7950 2100 50  0001 C CNN "Vendor"
+	1    7950 2100
+	0    -1   -1   0   
 $EndComp
 $Comp
 L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q5
 U 1 1 611B5EF1
 P 1300 4850
-F 0 "Q5" H 1150 4600 60  0000 L CNN
-F 1 "BSS806" V 1200 5050 60  0000 L CNN
+F 0 "Q5" H 1000 4950 60  0000 L CNN
+F 1 "BSS806" H 1050 5100 60  0000 L CNN
 F 2 "digikey-footprints:SOT-23-3" H 1500 5050 60  0001 L CNN
 F 3 "https://www.mouser.com/datasheet/2/196/Infineon-BSS806NE-DS-v02_01-en-1226303.pdf" H 1500 5150 60  0001 L CNN
 F 4 "726-BSS806NEH6327XTS" H 1300 4850 50  0001 C CNN "Part#"
@@ -568,14 +538,12 @@ Wire Wire Line
 Wire Wire Line
 	6150 800  5850 800 
 Wire Wire Line
-	2350 800  2350 1550
-Wire Wire Line
 	6950 800  6950 1550
 Wire Wire Line
 	5850 1250 5850 1150
 Connection ~ 5850 800 
 Wire Wire Line
-	5850 800  2350 800 
+	5850 800  2450 800 
 Wire Wire Line
 	5950 1150 5850 1150
 Connection ~ 5850 1150
@@ -648,7 +616,7 @@ $Comp
 L Connector_Generic:Conn_01x03 J4
 U 1 1 61262871
 P 1850 2750
-F 0 "J4" V 1816 2562 50  0000 R CNN
+F 0 "J4" V 1850 3000 50  0000 R CNN
 F 1 "12V  5V" V 1950 2900 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1850 2750 50  0001 C CNN
 F 3 "~" H 1850 2750 50  0001 C CNN
@@ -657,8 +625,6 @@ F 5 "Amazon" H 1850 2750 50  0001 C CNN "Vendor"
 	1    1850 2750
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	2550 2100 2550 2800
 Wire Wire Line
 	1850 3050 1850 2950
 Wire Wire Line
@@ -785,7 +751,7 @@ Connection ~ 8850 1900
 Wire Wire Line
 	8850 1900 8850 2000
 Wire Wire Line
-	6950 1550 8850 1550
+	6950 1550 7450 1550
 Wire Wire Line
 	1150 4650 1300 4650
 Wire Wire Line
@@ -814,10 +780,6 @@ Wire Wire Line
 Wire Wire Line
 	8750 1800 8950 1800
 Wire Wire Line
-	7650 1800 7150 1800
-Wire Wire Line
-	7150 1800 7150 2550
-Wire Wire Line
 	7950 1800 8250 1800
 Wire Wire Line
 	8550 1800 8750 1800
@@ -837,7 +799,7 @@ Wire Wire Line
 	7150 2900 7150 3650
 Connection ~ 6850 3200
 Wire Wire Line
-	7150 2550 8850 2550
+	7150 2550 7450 2550
 Wire Wire Line
 	6850 3200 7300 3200
 Wire Wire Line
@@ -912,14 +874,14 @@ Wire Wire Line
 $Comp
 L Geekgineering:XL4015 M1
 U 1 1 616B4815
-P 1950 2200
-F 0 "M1" H 1950 2565 50  0000 C CNN
-F 1 "XL4015" H 1950 2474 50  0000 C CNN
-F 2 "Footprint_Library:XL4015" H 1950 2200 50  0001 C CNN
-F 3 "" H 1950 2200 50  0001 C CNN
-F 4 "https://www.amazon.com/Adjustable-Converter-1-25-36v-Efficiency-Regulator/dp/B079N9BFZC" H 1950 2200 50  0001 C CNN "Part#"
-F 5 "Amazon" H 1950 2200 50  0001 C CNN "Vendor"
-	1    1950 2200
+P 2000 1100
+F 0 "M1" H 2000 1465 50  0000 C CNN
+F 1 "XL4015" H 2000 1374 50  0000 C CNN
+F 2 "Footprint_Library:XL4015" H 2000 1100 50  0001 C CNN
+F 3 "" H 2000 1100 50  0001 C CNN
+F 4 "https://www.amazon.com/Adjustable-Converter-1-25-36v-Efficiency-Regulator/dp/B079N9BFZC" H 2000 1100 50  0001 C CNN "Part#"
+F 5 "Amazon" H 2000 1100 50  0001 C CNN "Vendor"
+	1    2000 1100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1125,114 +1087,64 @@ Wire Wire Line
 	3550 5050 3550 4950
 Wire Wire Line
 	3550 4950 3600 4950
-Wire Wire Line
-	1500 2550 2450 2550
-Connection ~ 2350 2100
-Wire Wire Line
-	2350 2300 2450 2300
-Wire Wire Line
-	2450 2300 2450 2550
-Connection ~ 2450 2550
-Wire Wire Line
-	2450 2550 3550 2550
-Wire Wire Line
-	1550 2100 1450 2100
-Wire Wire Line
-	1450 2100 1450 2950
-Wire Wire Line
-	1500 2300 1500 2550
-Connection ~ 1500 2300
-Wire Wire Line
-	1500 2300 1550 2300
 $Comp
 L dk_Transistors-FETs-MOSFETs-Single:IRF9540NPBF Q3
 U 1 1 61686301
-P 1300 1000
-F 0 "Q3" V 1567 1000 60  0000 C CNN
-F 1 "SPD18P06PGBTMA1" V 1461 1000 60  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TO-252-3_TabPin2" H 1500 1200 60  0001 L CNN
-F 3 "https://www.mouser.com/datasheet/2/196/Infineon-SPD18P06P-DS-v03_04-en-1225203.pdf" H 1500 1300 60  0001 L CNN
-F 4 "IRF9540NPBF-ND" H 1500 1400 60  0001 L CNN "Digi-Key_PN"
-F 5 "IRF9540NPBF" H 1500 1500 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 1500 1600 60  0001 L CNN "Category"
-F 7 "Transistors - FETs, MOSFETs - Single" H 1500 1700 60  0001 L CNN "Family"
-F 8 "https://www.infineon.com/dgdl/irf9540npbf.pdf?fileId=5546d462533600a401535611cfa21dc8" H 1500 1800 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/infineon-technologies/IRF9540NPBF/IRF9540NPBF-ND/812088" H 1500 1900 60  0001 L CNN "DK_Detail_Page"
-F 10 "MOSFET P-CH 100V 23A TO-220AB" H 1500 2000 60  0001 L CNN "Description"
-F 11 "Infineon Technologies" H 1500 2100 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 1500 2200 60  0001 L CNN "Status"
-F 13 "726-SPD18P06P" H 1300 1000 50  0001 C CNN "Part#"
-F 14 "Mouser" H 1300 1000 50  0001 C CNN "Vendor"
-	1    1300 1000
+P 1150 1000
+F 0 "Q3" V 950 1150 60  0000 C CNN
+F 1 "SPD18P06PGBTMA1" V 1500 1000 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-3_TabPin2" H 1350 1200 60  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/196/Infineon-SPD18P06P-DS-v03_04-en-1225203.pdf" H 1350 1300 60  0001 L CNN
+F 4 "IRF9540NPBF-ND" H 1350 1400 60  0001 L CNN "Digi-Key_PN"
+F 5 "IRF9540NPBF" H 1350 1500 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 1350 1600 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 1350 1700 60  0001 L CNN "Family"
+F 8 "https://www.infineon.com/dgdl/irf9540npbf.pdf?fileId=5546d462533600a401535611cfa21dc8" H 1350 1800 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/infineon-technologies/IRF9540NPBF/IRF9540NPBF-ND/812088" H 1350 1900 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET P-CH 100V 23A TO-220AB" H 1350 2000 60  0001 L CNN "Description"
+F 11 "Infineon Technologies" H 1350 2100 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1350 2200 60  0001 L CNN "Status"
+F 13 "726-SPD18P06P" H 1150 1000 50  0001 C CNN "Part#"
+F 14 "Mouser" H 1150 1000 50  0001 C CNN "Vendor"
+	1    1150 1000
 	0    1    -1   0   
 $EndComp
-Wire Wire Line
-	950  1000 1100 1000
 $Comp
 L Device:R_US R1
 U 1 1 616AD35C
-P 1350 1450
-F 0 "R1" H 1282 1404 50  0000 R CNN
-F 1 "10k" H 1282 1495 50  0000 R CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 1390 1440 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 1350 1450 50  0001 C CNN
-F 4 "603-RT1206FRD0710KL" H 1350 1450 50  0001 C CNN "Part#"
-F 5 "Mouser" H 1350 1450 50  0001 C CNN "Vendor"
-	1    1350 1450
+P 1250 1300
+F 0 "R1" V 1200 1450 50  0000 R CNN
+F 1 "10k" V 1150 1350 50  0000 R CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1290 1290 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 1250 1300 50  0001 C CNN
+F 4 "603-RT1206FRD0710KL" H 1250 1300 50  0001 C CNN "Part#"
+F 5 "Mouser" H 1250 1300 50  0001 C CNN "Vendor"
+	1    1250 1300
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1200 1300 1200 1450
-Wire Wire Line
-	1500 1000 1600 1000
-Wire Wire Line
-	1600 1000 1600 1450
-Wire Wire Line
-	1600 1450 1500 1450
-Wire Wire Line
-	1450 2100 1450 1650
-Wire Wire Line
-	1450 1650 1600 1650
-Wire Wire Line
-	1600 1650 1600 1450
-Connection ~ 1450 2100
-Connection ~ 1600 1450
 $Comp
 L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q1
 U 1 1 616FF38B
-P 1200 2750
-F 0 "Q1" H 900 2800 60  0000 L CNN
-F 1 "BSS806" H 700 2900 60  0000 L CNN
-F 2 "digikey-footprints:SOT-23-3" H 1400 2950 60  0001 L CNN
-F 3 "https://www.mouser.com/datasheet/2/196/Infineon-BSS806NE-DS-v02_01-en-1226303.pdf" H 1400 3050 60  0001 L CNN
-F 4 "BSS138CT-ND" H 1400 3150 60  0001 L CNN "Digi-Key_PN"
-F 5 "BSS138" H 1400 3250 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 1400 3350 60  0001 L CNN "Category"
-F 7 "Transistors - FETs, MOSFETs - Single" H 1400 3450 60  0001 L CNN "Family"
-F 8 "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF" H 1400 3550 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/on-semiconductor/BSS138/BSS138CT-ND/244294" H 1400 3650 60  0001 L CNN "DK_Detail_Page"
-F 10 "MOSFET N-CH 50V 220MA SOT-23" H 1400 3750 60  0001 L CNN "Description"
-F 11 "ON Semiconductor" H 1400 3850 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 1400 3950 60  0001 L CNN "Status"
-F 13 "726-BSS806NEH6327XTS" H 1200 2750 50  0001 C CNN "Part#"
-F 14 "Mouser" H 1200 2750 50  0001 C CNN "Vendor"
-	1    1200 2750
+P 1050 1650
+F 0 "Q1" H 750 1750 60  0000 L CNN
+F 1 "BSS806" V 1200 1450 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 1250 1850 60  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/196/Infineon-BSS806NE-DS-v02_01-en-1226303.pdf" H 1250 1950 60  0001 L CNN
+F 4 "BSS138CT-ND" H 1250 2050 60  0001 L CNN "Digi-Key_PN"
+F 5 "BSS138" H 1250 2150 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 1250 2250 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 1250 2350 60  0001 L CNN "Family"
+F 8 "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF" H 1250 2450 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/BSS138/BSS138CT-ND/244294" H 1250 2550 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET N-CH 50V 220MA SOT-23" H 1250 2650 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 1250 2750 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1250 2850 60  0001 L CNN "Status"
+F 13 "726-BSS806NEH6327XTS" H 1050 1650 50  0001 C CNN "Part#"
+F 14 "Mouser" H 1050 1650 50  0001 C CNN "Vendor"
+	1    1050 1650
 	1    0    0    -1  
 $EndComp
-Connection ~ 1200 1450
 Connection ~ 3550 4950
-Wire Wire Line
-	1350 1650 1350 2300
-Wire Wire Line
-	1350 2300 1500 2300
-Wire Wire Line
-	900  2850 750  2850
-Wire Wire Line
-	750  2850 750  3750
-Wire Wire Line
-	1200 1450 1200 1900
-Wire Wire Line
-	1450 2950 1650 2950
 Wire Wire Line
 	1200 2950 1200 3000
 Wire Wire Line
@@ -1242,19 +1154,16 @@ Wire Wire Line
 $Comp
 L Diode:1N914 D2
 U 1 1 617DB464
-P 1050 1900
-F 0 "D2" H 1050 2117 50  0000 C CNN
-F 1 "1N914" H 1050 2026 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123F" H 1050 1725 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/395/1N4148W_SERIES_K1804-1918054.pdf" H 1050 1900 50  0001 C CNN
-F 4 "821-1N914BWRHG" H 1050 1900 50  0001 C CNN "Part#"
-F 5 "Mouser" H 1050 1900 50  0001 C CNN "Vendor"
-	1    1050 1900
+P 850 1300
+F 0 "D2" H 850 1517 50  0000 C CNN
+F 1 "1N914" H 850 1426 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 850 1125 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/395/1N4148W_SERIES_K1804-1918054.pdf" H 850 1300 50  0001 C CNN
+F 4 "821-1N914BWRHG" H 850 1300 50  0001 C CNN "Part#"
+F 5 "Mouser" H 850 1300 50  0001 C CNN "Vendor"
+	1    850  1300
 	1    0    0    -1  
 $EndComp
-Connection ~ 1200 1900
-Wire Wire Line
-	1200 1900 1200 2550
 $Comp
 L Device:R_US R12
 U 1 1 61524535
@@ -1281,8 +1190,6 @@ F 5 "Mouser" H 650 4900 50  0001 C CNN "Vendor"
 	1    650  4900
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	900  1900 650  1900
 Wire Wire Line
 	650  6050 5300 6050
 Wire Wire Line
@@ -1337,10 +1244,6 @@ NoConn ~ 5150 4850
 NoConn ~ 5150 4750
 NoConn ~ 3600 4750
 NoConn ~ 3600 4850
-Wire Wire Line
-	950  1000 950  1550
-Wire Wire Line
-	950  1650 1350 1650
 NoConn ~ 3250 1850
 Wire Wire Line
 	8450 3200 8600 3200
@@ -1486,7 +1389,7 @@ $Comp
 L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q4
 U 1 1 61886FFF
 P 1300 4050
-F 0 "Q4" H 1100 3850 60  0000 L CNN
+F 0 "Q4" H 1400 4150 60  0000 L CNN
 F 1 "BSS806" H 1100 4300 60  0000 L CNN
 F 2 "digikey-footprints:SOT-23-3" H 1500 4250 60  0001 L CNN
 F 3 "https://www.mouser.com/datasheet/2/196/Infineon-BSS806NE-DS-v02_01-en-1226303.pdf" H 1500 4350 60  0001 L CNN
@@ -1568,8 +1471,6 @@ Wire Wire Line
 Connection ~ 1650 2950
 Wire Wire Line
 	1650 2950 1750 2950
-Wire Wire Line
-	650  1900 650  3800
 Wire Wire Line
 	1600 3950 1950 3950
 Wire Wire Line
@@ -1762,4 +1663,180 @@ Connection ~ 9450 2650
 Wire Wire Line
 	9450 2650 9900 2650
 Connection ~ 9550 3400
+Wire Wire Line
+	850  900  1500 900 
+Wire Wire Line
+	1000 1300 1050 1300
+Connection ~ 1050 1300
+Wire Wire Line
+	700  1300 650  1300
+Wire Wire Line
+	650  1300 650  3800
+Wire Wire Line
+	1350 1000 1400 1000
+Wire Wire Line
+	1050 1450 1050 1300
+Wire Wire Line
+	750  1750 750  3750
+Wire Wire Line
+	850  1000 950  1000
+Wire Wire Line
+	1100 1300 1050 1300
+Wire Wire Line
+	1400 1300 1400 1000
+Connection ~ 1400 1300
+Wire Wire Line
+	1500 2550 1700 2550
+Connection ~ 1400 1000
+Wire Wire Line
+	2450 800  2450 1000
+Connection ~ 2450 1550
+Wire Wire Line
+	2450 1550 2500 1550
+Wire Wire Line
+	2450 2800 2550 2800
+Wire Wire Line
+	1400 1000 1600 1000
+Wire Wire Line
+	2400 1000 2450 1000
+Connection ~ 2450 1000
+Wire Wire Line
+	2450 1000 2450 1550
+Wire Wire Line
+	1500 900  1500 1200
+Wire Wire Line
+	1500 1200 1600 1200
+Wire Wire Line
+	1500 1200 1500 1350
+Wire Wire Line
+	1500 1350 2400 1350
+Wire Wire Line
+	2400 1350 2400 1200
+Connection ~ 1500 1200
+Wire Wire Line
+	1500 1350 1500 2550
+Connection ~ 1500 1350
+Connection ~ 1500 2550
+Wire Wire Line
+	1400 2950 1650 2950
+Wire Wire Line
+	1400 1300 1400 2950
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q7
+U 1 1 61CAEB34
+P 1000 2150
+F 0 "Q7" H 700 2250 60  0000 L CNN
+F 1 "BSS806" V 1150 2000 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 1200 2350 60  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/196/Infineon-BSS806NE-DS-v02_01-en-1226303.pdf" H 1200 2450 60  0001 L CNN
+F 4 "BSS138CT-ND" H 1200 2550 60  0001 L CNN "Digi-Key_PN"
+F 5 "BSS138" H 1200 2650 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 1200 2750 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 1200 2850 60  0001 L CNN "Family"
+F 8 "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF" H 1200 2950 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/BSS138/BSS138CT-ND/244294" H 1200 3050 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET N-CH 50V 220MA SOT-23" H 1200 3150 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 1200 3250 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1200 3350 60  0001 L CNN "Status"
+F 13 "726-BSS806NEH6327XTS" H 1000 2150 50  0001 C CNN "Part#"
+F 14 "Mouser" H 1000 2150 50  0001 C CNN "Vendor"
+	1    1000 2150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 1950 1000 1850
+Wire Wire Line
+	1000 1850 1050 1850
+Wire Wire Line
+	1000 2350 1000 2550
+Wire Wire Line
+	1000 2550 1500 2550
+$Comp
+L Device:R_US R25
+U 1 1 61CF5FB3
+P 1700 2400
+F 0 "R25" H 1632 2354 50  0000 R CNN
+F 1 "470" H 1632 2445 50  0000 R CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1740 2390 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_11-1669912.pdf" H 1700 2400 50  0001 C CNN
+F 4 "603-RT1206FRE07470RL" H 1700 2400 50  0001 C CNN "Part#"
+F 5 "Mouser" H 1700 2400 50  0001 C CNN "Vendor"
+	1    1700 2400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Zener D11
+U 1 1 61CF76FD
+P 1950 2250
+F 0 "D11" H 1950 2033 50  0000 C CNN
+F 1 "D_Zener" H 1950 2124 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 1950 2250 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/916/NZH_SER-1320207.pdf" H 1950 2250 50  0001 C CNN
+F 4 "771-NZH3V3A-115" H 1950 2250 50  0001 C CNN "Part#"
+F 5 "Mouser" H 1950 2250 50  0001 C CNN "Vendor"
+	1    1950 2250
+	-1   0    0    1   
+$EndComp
+Connection ~ 1700 2550
+Wire Wire Line
+	1700 2550 3550 2550
+Wire Wire Line
+	1300 2250 1700 2250
+Wire Wire Line
+	2450 1550 2450 2800
+Wire Wire Line
+	1800 2250 1700 2250
+Connection ~ 1700 2250
+Wire Wire Line
+	2100 2250 2100 3200
+$Comp
+L Geekgineering:MCP111-SOT23 U5
+U 1 1 6192E27E
+P 6500 2050
+F 0 "U5" H 6800 2300 60  0000 R CNN
+F 1 "MCP111-SOT23" V 6350 2400 60  0000 R CNN
+F 2 "digikey-footprints:SOT-23-3" H 6700 2250 60  0001 L CNN
+F 3 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en011325" H 6700 2350 60  0001 L CNN
+F 4 "MCP130T-300I/TTCT-ND" H 6700 2450 60  0001 L CNN "Digi-Key_PN"
+F 5 "MCP130T-300I/TT" H 6700 2550 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 6700 2650 60  0001 L CNN "Category"
+F 7 "PMIC - Supervisors" H 6700 2750 60  0001 L CNN "Family"
+F 8 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en011325" H 6700 2850 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/microchip-technology/MCP130T-300I-TT/MCP130T-300I-TTCT-ND/275294" H 6700 2950 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC SUPERVISOR 3.00V LOW SOT23" H 6700 3050 60  0001 L CNN "Description"
+F 11 "Microchip Technology" H 6700 3150 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 6700 3250 60  0001 L CNN "Status"
+	1    6500 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C7
+U 1 1 61989D84
+P 7450 2000
+F 0 "C7" H 7350 2150 50  0000 C CNN
+F 1 "100uF" V 7400 1800 50  0000 C CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.2" H 7488 1850 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/420/MVYRA_e-2509074.pdf" H 7450 2000 50  0001 C CNN
+F 4 "661-EMVY160ADA101MF5" H 7450 2000 50  0001 C CNN "Part#"
+F 5 "Mouser" H 7450 2000 50  0001 C CNN "Vendor"
+	1    7450 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 1800 7950 1950
+Wire Wire Line
+	7950 2250 7950 2550
+Connection ~ 7950 2550
+Wire Wire Line
+	7950 2550 8850 2550
+Wire Wire Line
+	7450 2150 7450 2550
+Connection ~ 7450 2550
+Wire Wire Line
+	7450 2550 7950 2550
+Wire Wire Line
+	7450 1850 7450 1550
+Connection ~ 7450 1550
+Wire Wire Line
+	7450 1550 8850 1550
 $EndSCHEMATC

@@ -618,7 +618,7 @@ U 1 1 61262871
 P 1850 2750
 F 0 "J4" V 1850 3000 50  0000 R CNN
 F 1 "12V  5V" V 1950 2900 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1850 2750 50  0001 C CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 1850 2750 50  0001 C CNN
 F 3 "~" H 1850 2750 50  0001 C CNN
 F 4 "https://www.amazon.com/Header-Lystaii-Pin-Connector-Electronic/dp/B06ZZN8L9S" H 1850 2750 50  0001 C CNN "Part#"
 F 5 "Amazon" H 1850 2750 50  0001 C CNN "Vendor"
